@@ -8,7 +8,7 @@ window.BODA_CONFIG = {
   direccionRecepcion: '',
   whatsapp: '', // Número colombiano con indicativo, p. ej. 57XXXXXXXXXX (sin +)
   musica: '', // Archivo propio con derechos de uso: assets/cancion.mp3
-  fotoPrincipal: '', // assets/foto-principal.jpg
+  fotoPrincipal: 'imagen.png', // assets/foto-principal.jpg
   fotosHistoria: ['', ''],
   // Opcional: enlaces ?invitado=CODIGO. Este control es orientativo del lado del navegador,
   // no sirve como registro seguro ni como verificación de identidad.
