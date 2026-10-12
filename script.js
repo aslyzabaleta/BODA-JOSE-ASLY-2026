@@ -13,7 +13,7 @@ function putPhoto(id,path){
  img.onerror=()=>console.warn('Fotografía pendiente de incorporar:',path);
  img.src=path;
 }
-putPhoto('mainPhoto',cfg.fotoPrincipal);
+if (!$('mainPhoto')?.querySelector('.portrait-photo-image')) putPhoto('mainPhoto',cfg.fotoPrincipal);
 (cfg.fotosHistoria||[]).slice(0,2).forEach((path,i)=>putPhoto('storyPhoto'+(i+1),path));
 function setMusicButton(){toggle.innerHTML=audio.paused?'<span aria-hidden="true">♫</span><span class="music-label">Reproducir música</span>':'<span aria-hidden="true">Ⅱ</span><span class="music-label">Pausar música</span>';}
 function playMusicOnOpen(){
