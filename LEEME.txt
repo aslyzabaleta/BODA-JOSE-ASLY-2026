@@ -1,0 +1,20 @@
+INVITACIÓN DIGITAL JOSÉ & ASLY — 26 DE DICIEMBRE DE 2026
+
+PREVISUALIZACIÓN
+Abre index.html en un navegador. Para un resultado más confiable, inicia un servidor local simple (por ejemplo con Python: python -m http.server 8000) y abre http://localhost:8000
+
+PERSONALIZACIÓN
+Edita config.js. Agrega las fotos reales de la pareja dentro de assets y escribe sus rutas en fotoPrincipal y fotosHistoria. Agrega un archivo de música autorizado y escribe la ruta en musica. Agrega el número de WhatsApp con indicativo del país, sin espacios ni signo +. Configura la hora de la ceremonia solamente cuando esté confirmada. La cuenta usa la zona horaria de Colombia -05:00. Antes de conocerse la hora, muestra una cuenta hacia las 00:00 del 26 de diciembre y lo aclara expresamente.
+
+CUPOS
+El objeto invitados en config.js permite enlaces ?invitado=CODIGO y restringe el campo de asistentes en el navegador, pero NO garantiza seguridad, identidad ni registro de respuestas. Para cupos seguros y seguimiento de confirmaciones se requiere una base de datos y un servicio de backend. El botón prepara un mensaje de WhatsApp, pero no lo envía automáticamente ni guarda su estado.
+
+PUBLICAR EN GITHUB PAGES
+1. Crea el repositorio público BODA-JOSE-ASLY-2026 en la cuenta aslyzabaleta.
+2. Descomprime el ZIP y sube TODOS los archivos y la carpeta assets a la raíz del repositorio (no subas el ZIP como único archivo).
+3. En Settings > Pages, elige Deploy from a branch; selecciona main y /(root), luego Save.
+4. Al publicarse, visita https://aslyzabaleta.github.io/BODA-JOSE-ASLY-2026/
+5. Prueba apertura, música (tras configurarla), fotos, contador y confirmación de WhatsApp en teléfono real.
+
+IMPORTANTE
+No hay modificaciones en el repositorio anterior. Ésta es una versión inicial funcional con datos pendientes claramente indicados; no representa confirmación en vivo de la publicación ni un sistema seguro de administración de invitados.
