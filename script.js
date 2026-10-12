@@ -58,7 +58,8 @@ $('openInvite').addEventListener('click',()=>{
  cover.classList.add('is-opening');
  $('openInvite').setAttribute('aria-disabled','true');
  $('coverHint').textContent='Nuestra historia comienza…';
- const delay=reduced?250:2600;
+ // La tarjeta tarda aprox. 2.45 s en salir del sobre: dejar tiempo para contemplarla.
+ const delay=reduced?2400:4800;
  window.setTimeout(()=>{
   content.classList.add('active');content.inert=false;
   $('presentacion').classList.add('visible');
