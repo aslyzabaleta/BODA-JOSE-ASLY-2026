@@ -8,7 +8,7 @@ window.BODA_CONFIG = {
   direccionRecepcion: '',
   whatsapp: '', // Número colombiano con indicativo, p. ej. 57XXXXXXXXXX (sin +)
   musica: '', // Archivo propio con derechos de uso: assets/cancion.mp3
-  inicioMusica: 66, // 1 minuto y 6 segundos
+  inicioMusica: 92, // 1 minuto y 32 segundos; iniciar al pulsar ABRIR INVITACIÓN
   fotoPrincipal: 'imagen.png', // assets/foto-principal.jpg
   fotosHistoria: ['', ''],
   // Opcional: enlaces ?invitado=CODIGO. Este control es orientativo del lado del navegador,
