@@ -109,3 +109,19 @@
   #cuenta-regresiva > .blooms-right,
   #cierre > .blooms-right { animation:none !important; }
 }
+
+/* Difuminado selectivo: únicamente la flor inferior del versículo,
+   la esquina superior derecha de lugares y la inferior derecha de recepción.
+   No se modifica su posición, tamaño ni animación. */
+#mensaje > .flower-scripture-b,
+#lugares .bloom-two,
+#lugares .bloom-four {
+  -webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,
+    #000 28%, rgba(0,0,0,.98) 42%, rgba(0,0,0,.78) 56%,
+    rgba(0,0,0,.35) 67%, transparent 78%);
+  mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,
+    #000 28%, rgba(0,0,0,.98) 42%, rgba(0,0,0,.78) 56%,
+    rgba(0,0,0,.35) 67%, transparent 78%);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+}
