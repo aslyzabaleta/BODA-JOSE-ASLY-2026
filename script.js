@@ -16,14 +16,22 @@ function putPhoto(id,path){
 if (!$('mainPhoto')?.querySelector('.portrait-photo-image')) putPhoto('mainPhoto',cfg.fotoPrincipal);
 (cfg.fotosHistoria||[]).slice(0,2).forEach((path,i)=>putPhoto('storyPhoto'+(i+1),path));
 function setMusicButton(){toggle.innerHTML=audio.paused?'<span aria-hidden="true">♫</span><span class="music-label">Reproducir música</span>':'<span aria-hidden="true">Ⅱ</span><span class="music-label">Pausar música</span>';}
+const musicStart=Math.max(0,Number(cfg.inicioMusica)||0);
+function seekMusicStart(){
+ if(!musicStart)return;
+ try{
+  if(!Number.isFinite(audio.duration)||musicStart<audio.duration)audio.currentTime=musicStart;
+ }catch(e){console.warn('La música todavía no permite adelantar:',e)}
+}
+audio.addEventListener('loadedmetadata',seekMusicStart);
 function playMusicOnOpen(){
  if(!cfg.musica||typeof cfg.musica!=='string')return;
- if(!audio.src)audio.src=cfg.musica;
+ if(!audio.src){audio.src=cfg.musica;seekMusicStart();}
  toggle.hidden=false;
  audio.play().then(setMusicButton).catch(setMusicButton);
 }
-toggle.addEventListener('click',()=>{if(audio.paused){audio.play().then(setMusicButton).catch(setMusicButton);}else{audio.pause();setMusicButton();}});
-audio.addEventListener('ended',setMusicButton);
+toggle.addEventListener('click',()=>{if(audio.paused){if(audio.ended)seekMusicStart();audio.play().then(setMusicButton).catch(setMusicButton);}else{audio.pause();setMusicButton();}});
+audio.addEventListener('ended',()=>{seekMusicStart();audio.play().then(setMusicButton).catch(setMusicButton);});
 $('openInvite').addEventListener('click',()=>{
  if(opened)return;opened=true;
  playMusicOnOpen(); // solo tras la acción del invitado
