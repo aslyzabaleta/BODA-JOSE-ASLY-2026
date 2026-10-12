@@ -1,35 +1,77 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f7f2e9">
-<meta name="description" content="José y Asly · 26 de diciembre de 2026. Una invitación para celebrar nuestro amor.">
-<title>José & Asly — 26.12.2026</title>
-<link rel="stylesheet" href="styles.css"><script defer src="config.js"></script><script defer src="script.js"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f6f0e5">
+<meta name="description" content="José & Asly · 26 de diciembre de 2026. Una invitación para celebrar nuestro amor.">
+<meta property="og:title" content="José & Asly · 26 · 12 · 2026">
+<meta property="og:description" content="Hay historias de amor que no solo se cuentan, se viven…">
+<title>José & Asly · Nuestra boda</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script defer src="config.js"></script>
+<script defer src="script.js"></script>
 </head>
 <body>
-<button id="musicToggle" class="music-toggle" type="button" aria-label="Activar o pausar música" hidden>♫ <span>Música</span></button>
-<main>
-<section class="cover frame" id="portada" aria-label="Portada de invitación">
- <span class="corner corner-tl" aria-hidden="true">❦</span><span class="corner corner-br" aria-hidden="true">❦</span>
- <div class="overline">NOS CASAMOS</div><div class="monogram">J <i>&</i> A</div><div class="cover-names">JOSÉ <span>&</span> ASLY</div><div class="date">26 · 12 · 2026</div>
- <div class="flora flora-left" aria-hidden="true"><span>✿</span><span>✾</span><span>✿</span></div><div class="flora flora-right" aria-hidden="true"><span>✿</span><span>✾</span></div>
- <div id="envelope" class="envelope" aria-hidden="true"><div class="env-back"></div><div class="env-flap"></div><div class="env-front"></div><div class="wax">J<span>&</span>A</div></div>
- <button id="openInvite" class="gold-button" type="button">ABRIR INVITACIÓN <span aria-hidden="true">→</span></button>
- <div class="cover-foot">Con amor, para compartir nuestro para siempre.</div>
+<div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
+<button id="musicToggle" class="music-toggle" type="button" aria-label="Pausar o reanudar música" hidden><span aria-hidden="true">♫</span><span class="music-label">Pausar música</span></button>
+<main id="mainContent">
+<!-- PORTADA: escena de apertura, no una página PDF -->
+<section class="scene cover" id="portada" aria-label="Abrir invitación">
+  <div class="ambience" aria-hidden="true"></div><div class="film-grain" aria-hidden="true"></div>
+  <img class="blooms blooms-cover-left" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true">
+  <img class="blooms blooms-cover-right" src="assets/flor-rosa-real-derecha.webp" alt="" aria-hidden="true">
+  <div class="dust dust-one" aria-hidden="true"></div><div class="dust dust-two" aria-hidden="true"></div><div class="dust dust-three" aria-hidden="true"></div>
+  <div class="cover-heading">
+    <p class="eyebrow" data-reveal>NUESTRA BODA</p>
+    <div class="monogram" aria-label="J y A" data-reveal>J<span>&</span>A</div>
+    <p class="cover-names" data-reveal>JOSÉ <span>&</span> ASLY</p>
+    <p class="small-date" data-reveal>26 · 12 · 2026</p>
+  </div>
+  <div class="envelope-stage">
+    <div id="envelope" class="envelope" aria-hidden="true">
+      <div class="envelope-back"></div>
+      <div class="envelope-lining"></div>
+      <div class="portrait-card" id="portraitCard"><div class="portrait-photo" id="mainPhoto"><span>Pronto, nuestra fotografía</span></div><div class="portrait-caption">JOSÉ & ASLY <span>26 · 12 · 2026</span></div></div>
+      <div class="envelope-flap"></div>
+      <div class="envelope-front"></div>
+      <div class="envelope-seal">J<span>&</span>A</div>
+    </div>
+  </div>
+  <button class="cta open-cta" id="openInvite" type="button">ABRIR INVITACIÓN <span aria-hidden="true">↗</span></button>
+  <p class="cover-subtitle" id="coverHint">Una historia que continúa…</p>
 </section>
 <div id="invitationContent" class="invitation-content" inert>
-<section class="section intro" id="presentacion"><div id="photoReveal" class="photo-reveal"><div id="mainPhoto" class="photo-placeholder"><span>Un recuerdo nuestro</span><small>Aquí irá nuestra fotografía</small></div></div><p class="overline">NUESTRA BODA</p><h1>José <em>&</em> Asly</h1><p class="date">26 · 12 · 2026</p><div class="divider">✧</div></section>
-<section class="section story" id="historia"><p class="overline">DESDE 2015</p><h2>Nuestra historia</h2><p class="hero-quote">HAY HISTORIAS DE AMOR QUE NO SOLO SE CUENTAN, SE VIVEN…</p><p>Desde 2015, cuando la vida nos cruzó en el momento perfecto, comenzó una historia llena de risas, aprendizaje, aventura y mucho amor.</p><p class="story-emphasis">Crecimos, cambiamos y aprendimos. Y seguimos eligiéndonos.</p><div class="story-photos"><div id="storyPhoto1" class="photo-placeholder"><span>Nuestro recuerdo</span><small>Fotografía 1</small></div><div id="storyPhoto2" class="photo-placeholder"><span>Otro momento</span><small>Fotografía 2</small></div></div></section>
-<section class="section scripture"><div class="ornament">✧</div><blockquote>«Por encima de todo, vístanse de amor, que es el vínculo perfecto».</blockquote><p class="citation">Colosenses 3:14</p></section>
-<section class="section venue"><p class="overline">CEREMONIA RELIGIOSA</p><h2>Nuestro sí ante Dios</h2><div class="venue-photo"><img src="assets/iglesia-san-jose-majagual.webp" alt="Fotografía real de la Iglesia San José de Majagual" loading="lazy"></div><h3>Iglesia San José de Majagual</h3><p>Hora por confirmar</p></section>
-<section class="section venue"><p class="overline">RECEPCIÓN</p><h2>Y después, celebramos juntos</h2><div class="venue-photo venue-night"><img src="assets/gastro-bar-majagua.webp" alt="Fotografía real del letrero luminoso MAJAGUA en Gastro-bar Majagua" loading="lazy"></div><h3>Gastro-bar Majagua</h3><p>Detalles y hora por confirmar</p></section>
-<section class="section countdown"><p class="overline">EL GRAN DÍA</p><h2>Cuenta regresiva</h2><div class="counter" aria-live="off"><div><strong id="days">—</strong><span>Días</span></div><div><strong id="hours">—</strong><span>Horas</span></div><div><strong id="minutes">—</strong><span>Minutos</span></div><div><strong id="seconds">—</strong><span>Segundos</span></div></div><p class="muted" id="countNote">Cuenta hasta el comienzo del 26 de diciembre; la hora de la ceremonia aún no está confirmada.</p></section>
-<section class="section adults"><p class="overline">UNA NOCHE ESPECIAL</p><h2>Una celebración para adultos</h2><p>Hemos preparado nuestra celebración pensando en compartir este momento de una manera especial y tranquila junto a nuestros invitados.</p><p>Por ello, nuestra celebración ha sido organizada exclusivamente para adultos.</p><p>Gracias por comprender y acompañarnos con tanto cariño en este día tan importante para nosotros. 🤍</p></section>
-<section class="section dress"><p class="overline">PARA ESE DÍA TAN ESPECIAL</p><h2>Código de vestimenta</h2><div class="dress-row"><article><div class="dress-symbol" aria-hidden="true">✧</div><h3>Mujeres</h3><p>Vestidos largos o midi, elegantes y apropiados para una celebración de matrimonio.</p></article><article><div class="dress-symbol" aria-hidden="true">✧</div><h3>Hombres</h3><p>Estilo elegante casual, con inspiración clásica y atemporal, adaptado a un contexto cálido y campestre.</p><p>Se permiten pantalones clásicos y semiclásicos en tela dril y guayaberas elegantes.</p><p><strong>No se permiten jeans.</strong></p><p>Se permiten los tonos blanco, café, negro y beige.</p></article></div></section>
-<section class="section reserved"><h2>Tonos reservados</h2><p>Estos tonos están reservados para nuestra celebración. Por favor, evita usarlos en tu vestuario.</p><div class="swatches" aria-label="Tonos reservados para mujeres"><div><i style="--swatch:#f7f2e7"></i>Marfil</div><div><i style="--swatch:#ece0ca"></i>Crema</div><div><i style="--swatch:#dac4a3"></i>Champagne</div><div><i style="--swatch:#caa65f"></i>Dorado</div><div><i style="--swatch:#e9c6ce"></i>Rosa pálido</div><div><i style="--swatch:#b7858b"></i>Rosa viejo</div><div><i style="--swatch:#d5adb3"></i>Rosa empolvado</div><div><i style="--swatch:#ac8695"></i>Rosa malva</div><div><i style="--swatch:#752d43"></i>Vino / Borgoña</div><div><i style="--swatch:#232323"></i>Negro</div><div><i style="--swatch:#fff"></i>Blanco</div></div><p class="reserved-note">Para los hombres se permiten blanco, café, negro y beige.</p><p class="muted">El rojo está libre para los invitados.</p></section>
-<section class="section gifts"><h2>Lluvia de sobres</h2><div class="gift-envelope" aria-label="Sobre crema con sello dorado"><div class="gift-flap"></div><div class="gift-wax">J&A</div></div></section>
-<section class="section rsvp" id="confirmacion"><p class="overline">TE ESPERAMOS</p><h2>¿Nos acompañas?</h2><p>Queremos celebrar este día junto a ti. Confirma tu asistencia para que podamos esperarte y preparar todo con mucho cariño.</p><form id="rsvpForm"><label for="guestName">Tu nombre</label><input id="guestName" name="nombre" autocomplete="name" required maxlength="100" placeholder="Nombre y apellido"><label for="attendance">¿Asistirás?</label><select id="attendance" name="asistencia"><option value="Sí">Sí, asistiré</option><option value="No">No podré asistir</option></select><label for="companions">Asistiré con (nombres, opcional)</label><input id="companions" name="acompanantes" maxlength="200" placeholder="Acompañantes"><label for="guestCount">Número de personas</label><input id="guestCount" name="personas" type="number" min="1" max="20" value="1" required><p id="quotaNote" class="muted">Los cupos personalizados se habilitarán cuando se incorpore la lista de invitados.</p><button class="gold-button" type="submit">CONFIRMAR ASISTENCIA →</button><p class="muted" id="rsvpStatus" role="status"></p></form></section>
-<section class="section ending" id="cierre"><div class="ornament">✧</div><p class="overline">CON TODO NUESTRO AMOR</p><h2>José <em>&</em> Asly</h2><p class="date">26 · 12 · 2026</p><p>Gracias por ser parte de nuestra historia.</p><p>Los esperamos para celebrar el amor, la vida y el comienzo de nuestro para siempre.</p><div class="end-ornament">❦</div></section>
-</div>
-</main><audio id="musicPlayer" loop preload="none"></audio>
-</body></html>
+<section class="scene intro animated-scene" id="presentacion">
+  <div class="ambience" aria-hidden="true"></div><img class="blooms blooms-right" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true">
+  <div class="scene-inner center"><div class="fine-line reveal"></div><p class="eyebrow reveal">EL COMIENZO DE NUESTRO PARA SIEMPRE</p><h1 class="hero-names reveal">José <em>&</em> Asly</h1><p class="small-date reveal">26 · 12 · 2026</p><div class="gold-dash reveal">✧</div><p class="guide reveal">Desliza para descubrir nuestra historia</p><span class="down-arrow reveal" aria-hidden="true">↓</span></div>
+</section>
+<section class="scene story animated-scene" id="historia">
+  <img class="blooms blooms-left" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true">
+  <div class="scene-inner"><p class="eyebrow reveal">DESDE 2015</p><h2 class="section-title reveal">Nuestra historia</h2><p class="statement reveal">HAY HISTORIAS DE AMOR QUE NO SOLO SE CUENTAN, SE VIVEN…</p><p class="body-copy reveal">Desde 2015, cuando la vida nos cruzó en el momento perfecto, comenzó una historia llena de risas, aprendizaje, aventura y mucho amor.</p><p class="serif-italic reveal">Crecimos, cambiamos y aprendimos. Y seguimos eligiéndonos.</p><div class="story-pictures"><div class="film-photo reveal" id="storyPhoto1"><span>Aquí irá nuestra primera fotografía</span></div><div class="film-photo reveal" id="storyPhoto2"><span>Aquí irá nuestra segunda fotografía</span></div></div></div>
+</section>
+<section class="scene scripture animated-scene" id="mensaje">
+  <div class="cinema-glow" aria-hidden="true"></div><div class="scene-inner center"><span class="gilded-symbol reveal">✦</span><blockquote class="reveal">«Por encima de todo, vístanse de amor, que es el vínculo perfecto».</blockquote><p class="verse-reference reveal">Colosenses 3:14</p><div class="fine-line reveal"></div></div>
+</section>
+<!-- Una sola sección visual con la iglesia arriba y la recepción abajo -->
+<section class="scene locations animated-scene" id="lugares">
+  <div class="scene-inner locations-inner"><p class="eyebrow reveal">DOS LUGARES, UN MISMO DÍA</p>
+   <article class="location-block reveal" id="ceremonia"><div class="location-image"><img src="assets/iglesia-san-jose-majagual.webp" alt="Fotografía real de la Iglesia San José de Majagual" loading="lazy"></div><div class="location-content"><p class="location-kicker">CEREMONIA RELIGIOSA</p><h2>Nuestro sí ante Dios</h2><p class="location-name">Iglesia San José de Majagual</p><p class="pending">Hora por confirmar</p></div></article>
+   <div class="location-between reveal" aria-hidden="true"><span>✧</span></div>
+   <article class="location-block reveal" id="recepcion"><div class="location-image majagua-image"><img src="assets/gastro-bar-majagua.webp" alt="Fotografía original del letrero MAJAGUA en Gastro-bar Majagua" loading="lazy"></div><div class="location-content"><p class="location-kicker">RECEPCIÓN</p><h2>Y después, celebremos juntos</h2><p class="location-name">Gastro-bar Majagua</p><p class="pending">Detalles y hora por confirmar</p></div></article>
+  </div>
+</section>
+<section class="scene countdown animated-scene" id="cuenta-regresiva"><img class="blooms blooms-right" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true"><div class="scene-inner center"><p class="eyebrow reveal">CADA DÍA MÁS CERCA</p><h2 class="section-title reveal">Cuenta regresiva</h2><div class="count-units reveal"><div><strong id="days">—</strong><small>DÍAS</small></div><div><strong id="hours">—</strong><small>HORAS</small></div><div><strong id="minutes">—</strong><small>MINUTOS</small></div><div><strong id="seconds">—</strong><small>SEGUNDOS</small></div></div><p class="fine-note reveal" id="countNote">Cuenta hasta el comienzo del 26 de diciembre. La hora de la ceremonia está por confirmar.</p></div></section>
+<section class="scene adults animated-scene" id="solo-adultos"><div class="scene-inner center"><p class="eyebrow reveal">PREPARAMOS UN MOMENTO ESPECIAL</p><h2 class="section-title reveal">Una celebración para adultos</h2><p class="body-copy reveal">Hemos preparado nuestra celebración pensando en compartir este momento de una manera especial y tranquila junto a nuestros invitados.</p><p class="body-copy reveal">Por ello, nuestra celebración ha sido organizada exclusivamente para adultos.</p><p class="body-copy reveal">Gracias por comprender y acompañarnos con tanto cariño en este día tan importante para nosotros. 🤍</p></div></section>
+<section class="scene dress animated-scene" id="vestuario"><div class="scene-inner center"><p class="eyebrow reveal">PARA CELEBRAR JUNTOS</p><h2 class="section-title reveal">Código de vestimenta</h2><div class="dress-grid"><article class="dress-item reveal"><div class="dress-figure" aria-hidden="true">✧</div><h3>Mujeres</h3><p>Vestidos largos o midi, elegantes y apropiados para una celebración de matrimonio.</p></article><article class="dress-item reveal"><div class="dress-figure" aria-hidden="true">✧</div><h3>Hombres</h3><p>Estilo elegante casual, con inspiración clásica y atemporal, adaptado a un contexto cálido y campestre.</p><p>Se permiten pantalones clásicos y semiclásicos en tela dril y guayaberas elegantes.</p><p><strong>No se permiten jeans.</strong></p><p>Se permiten los colores blanco, café, negro y beige.</p></article></div></div></section>
+<section class="scene reserved animated-scene" id="tonos-reservados"><div class="scene-inner center"><p class="eyebrow reveal">DETALLES DE NUESTRA CELEBRACIÓN</p><h2 class="section-title reveal">Tonos reservados</h2><p class="body-copy reveal">Estos tonos están reservados para nuestra celebración. Por favor, evita usarlos en tu vestuario.</p><div class="swatches reveal" aria-label="Tonos reservados para mujeres"><div><i style="--swatch:#f7f2e7"></i>Marfil</div><div><i style="--swatch:#ece0ca"></i>Crema</div><div><i style="--swatch:#dac4a3"></i>Champagne</div><div><i style="--swatch:#caa65f"></i>Dorado</div><div><i style="--swatch:#e9c6ce"></i>Rosa pálido</div><div><i style="--swatch:#b7858b"></i>Rosa viejo</div><div><i style="--swatch:#d5adb3"></i>Rosa empolvado</div><div><i style="--swatch:#ac8695"></i>Rosa malva</div><div><i style="--swatch:#752d43"></i>Vino / Borgoña</div><div><i style="--swatch:#232323"></i>Negro</div><div><i style="--swatch:#fff"></i>Blanco</div></div><p class="reserved-note reveal">Para los hombres se permiten blanco, café, negro y beige.</p><p class="fine-note reveal">El rojo queda libre para los invitados.</p></div></section>
+<section class="scene gifts animated-scene" id="lluvia"><img class="blooms blooms-left" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true"><div class="scene-inner center"><p class="eyebrow reveal">CON CARIÑO</p><h2 class="section-title reveal">Lluvia de sobres</h2><div class="gift-envelope reveal" aria-label="Sobre crema con sello dorado"><div class="gift-flap"></div><div class="gift-seal">J<span>&</span>A</div></div></div></section>
+<section class="scene rsvp animated-scene" id="confirmacion"><div class="scene-inner center"><p class="eyebrow reveal">QUEREMOS CONTAR CONTIGO</p><h2 class="section-title reveal">¿Nos acompañas?</h2><p class="body-copy reveal">Queremos celebrar este día junto a ti. Confirma tu asistencia para que podamos esperarte y preparar todo con mucho cariño.</p><form id="rsvpForm" class="rsvp-form reveal"><label for="guestName">TU NOMBRE</label><input id="guestName" autocomplete="name" required maxlength="100" placeholder="Nombre y apellido"><label for="attendance">¿ASISTIRÁS?</label><select id="attendance"><option value="Sí">Sí, asistiré</option><option value="No">No podré asistir</option></select><label for="companions">ASISTIRÉ CON (OPCIONAL)</label><input id="companions" maxlength="200" placeholder="Nombres de acompañantes"><label for="guestCount">NÚMERO DE PERSONAS</label><input id="guestCount" type="number" min="1" max="20" value="1" required><p id="quotaNote" class="fine-note">Los cupos individuales se habilitarán cuando incorporemos la lista de invitados.</p><button class="cta" type="submit">CONFIRMAR ASISTENCIA <span aria-hidden="true">↗</span></button><p class="form-status" id="rsvpStatus" role="status" aria-live="polite"></p></form></div></section>
+<section class="scene ending animated-scene" id="cierre"><div class="ambience" aria-hidden="true"></div><img class="blooms blooms-right" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true"><div class="scene-inner center"><span class="gilded-symbol reveal">✧</span><p class="eyebrow reveal">CON TODO NUESTRO AMOR</p><h2 class="hero-names reveal">José <em>&</em> Asly</h2><p class="small-date reveal">26 · 12 · 2026</p><p class="body-copy reveal">Gracias por ser parte de nuestra historia.</p><p class="serif-italic reveal">Los esperamos para celebrar el amor, la vida y el comienzo de nuestro para siempre.</p><div class="fine-line reveal"></div></div></section>
+</div></main>
+<audio id="musicPlayer" loop preload="none"></audio>
+</body>
+</html>
