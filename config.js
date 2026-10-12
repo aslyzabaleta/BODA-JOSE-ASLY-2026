@@ -7,7 +7,7 @@ window.BODA_CONFIG = {
   horaRecepcion: '',
   direccionRecepcion: '',
   whatsapp: '', // Número colombiano con indicativo, p. ej. 57XXXXXXXXXX (sin +)
-  musica: '', // Archivo propio con derechos de uso: assets/cancion.mp3
+  musica: 'assets/Amor y Sentimiento - Banda Nueva Esperanza de Manguelito La que toca Bonito (Audio Corregido).mp3', // MP3 incorporado por los novios; verificar permiso de publicación
   inicioMusica: 92, // 1 minuto y 32 segundos; iniciar al pulsar ABRIR INVITACIÓN
   fotoPrincipal: 'imagen.png', // assets/foto-principal.jpg
   fotosHistoria: ['', ''],
