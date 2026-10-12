@@ -104,3 +104,41 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
  .scene { padding: 58px 15px; }
  .locations { padding-left: 10px; padding-right: 10px; }
 }
+
+/* Presentación íntima elegida por José y Asly: solo la segunda pantalla. */
+#presentacion.intro{min-height:100svh;padding:clamp(45px,7vh,80px) 20px;}
+#presentacion .intro-storyline{display:flex;flex-direction:column;align-items:center;gap:clamp(11px,1.7vh,20px);max-width:720px;}
+#presentacion .fine-line{margin:0 auto 4px;}
+#presentacion .intro-heading{font-size:clamp(41px,5.6vw,67px);font-weight:400;font-style:italic;line-height:1.08;letter-spacing:-.025em;color:#916c43;max-width:650px;text-wrap:balance;}
+#presentacion .intro-anticipation{font-size:clamp(24px,2.9vw,30px);line-height:1.22;max-width:630px;text-wrap:balance;}
+#presentacion .intro-invitation{font-size:clamp(26px,3.5vw,35px);line-height:1.18;color:#755335;max-width:610px;text-wrap:balance;}
+#presentacion .intro-couple.hero-names{font-size:clamp(64px,8.8vw,113px);line-height:1;margin:5px auto 0;white-space:nowrap;}
+#presentacion .intro-promise{font-size:clamp(25px,3.8vw,36px);font-style:italic;line-height:1.2;color:#98703f;max-width:600px;text-wrap:balance;}
+#presentacion .gold-dash{font-size:26px;line-height:1;margin:0;}
+#presentacion .intro-guide.guide{font-size:clamp(19px,2.25vw,23px);line-height:1.22;}
+#presentacion .down-arrow{margin-top:0;line-height:1.1;}
+@media(max-width:700px){
+ #presentacion.intro{padding:32px 18px 42px;min-height:100svh;}
+ #presentacion .intro-storyline{gap:clamp(9px,1.6vh,15px);}
+ #presentacion .fine-line{margin:0 auto 2px;}
+ #presentacion .intro-heading{font-size:clamp(35px,9vw,47px);line-height:1.08;}
+ #presentacion .intro-anticipation{font-size:clamp(22px,5.7vw,27px);}
+ #presentacion .intro-invitation{font-size:clamp(24px,6.2vw,30px);}
+ #presentacion .intro-couple.hero-names{font-size:clamp(60px,16.8vw,91px);margin:1px auto 0;}
+ #presentacion .intro-promise{font-size:clamp(24px,6.2vw,30px);}
+ #presentacion .intro-guide.guide{font-size:19px;}
+}
+@media(max-width:390px){
+ #presentacion.intro{padding:27px 16px 34px;}
+ #presentacion .intro-storyline{gap:10px;}
+ #presentacion .intro-couple.hero-names{font-size:clamp(58px,16.3vw,70px);}
+}
+@media(max-height:680px) and (max-width:700px){
+ #presentacion.intro{padding-top:24px;padding-bottom:26px;}
+ #presentacion .intro-storyline{gap:8px;}
+ #presentacion .intro-heading{font-size:clamp(33px,8.5vw,42px);}
+ #presentacion .intro-anticipation{font-size:clamp(21px,5.4vw,25px);}
+ #presentacion .intro-invitation{font-size:clamp(23px,5.9vw,28px);}
+ #presentacion .intro-promise{font-size:clamp(23px,6vw,29px);}
+ #presentacion .fine-line{margin:0;}
+}
