@@ -1,0 +1,106 @@
+/* Ajuste de lectura: composición de pantalla, no lámina reducida. */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+.scene-inner { width: min(100%, 950px); }
+.scene-inner.center { max-width: 800px; }
+.eyebrow { font-size: 13px; letter-spacing: .17em; line-height: 1.6; }
+.small-date { font-size: 16px; letter-spacing: .18em; }
+.location-kicker { font-size: 13px; letter-spacing: .16em; }
+.verse-reference { font-size: 15px; }
+.fine-note { font-size: 15px; }
+.swatches div { font-size: 12px; }
+.rsvp-form label { font-size: 13px; letter-spacing: .08em; }
+.cta { font-size: 14px; letter-spacing: .08em; }
+.cover-names { font-size: clamp(32px, 4.7vw, 50px); letter-spacing: .11em; }
+.cover .small-date { font-size: clamp(15px, 1.35vw, 18px); }
+.count-units small { font-size: clamp(10px, 1.3vw, 13px); }
+@media (min-width: 701px) {
+ .cover { padding-top: clamp(24px, 4vh, 48px); padding-bottom: 30px; }
+ .monogram { font-size: clamp(140px, 13vw, 188px); }
+ .cover-names { margin-top: 9px; }
+ .envelope-stage { width: min(53vw, 590px); height: clamp(300px, 40vh, 405px); margin: 0 auto; }
+ .envelope { height: clamp(250px, 30vh, 305px); }
+ .envelope-seal { width: 78px; height: 78px; }
+ .portrait-card { height: clamp(295px, 38vh, 345px); }
+ .cover.is-opening .portrait-card { transform: translateY(-205px) scale(1); }
+ .open-cta { margin-top: 6px; }
+ .cover-subtitle { font-size: 26px; margin-top: 10px; }
+ .hero-names { font-size: clamp(100px, 10vw, 156px); }
+ .section-title { font-size: clamp(68px, 6.7vw, 96px); }
+ .story .scene-inner { max-width: 900px; }
+ .locations-inner { max-width: 1050px; }
+ .location-block { max-width: 1050px; min-height: 450px; }
+ .location-content h2 { font-size: clamp(45px, 5vw, 61px); }
+ .location-name { font-size: clamp(27px, 3.5vw, 39px); }
+ .location-between { margin: 7px auto; }
+ .blooms-cover-left, .blooms-cover-right { width: clamp(235px, 23vw, 390px); }
+}
+@media (max-width: 700px) {
+ body { font-size: 22px; }
+ .scene { min-height: 64svh; padding: 65px 17px; }
+ .scene-inner, .scene-inner.center { width: 100%; max-width: 550px; }
+ .cover { min-height: 100svh; min-height: 100dvh; padding: max(17px, 3vh) 12px 22px; justify-content: center; gap: 0; }
+ .cover-heading { margin-top: 0; }
+ .cover .eyebrow { font-size: 13px; letter-spacing: .21em; margin-bottom: 7px; }
+ .monogram { font-size: clamp(112px, 30vw, 143px); line-height: .85; }
+ .cover-names { font-size: clamp(30px, 8vw, 39px); letter-spacing: .09em; margin-top: 14px; }
+ .small-date, .cover .small-date { font-size: 16px; margin-top: 9px; letter-spacing: .18em; }
+ .envelope-stage { width: min(92vw, 440px); height: clamp(245px, 32svh, 330px); margin: 12px auto 0; }
+ .envelope { height: clamp(205px, 26svh, 255px); }
+ .envelope-seal { width: 67px; height: 67px; }
+ .portrait-card { height: clamp(240px, 30vh, 295px); }
+ .cover.is-opening .portrait-card { transform: translateY(-135px) scale(1); }
+ .open-cta { margin-top: 4px; }
+ .cta { min-height: 58px; padding: 16px 25px; font-size: 14px; letter-spacing: .07em; }
+ .cover-subtitle { margin-top: 11px; font-size: 25px; }
+ .blooms-cover-left, .blooms-cover-right { width: clamp(125px, 32vw, 205px); }
+ .intro { min-height: 88svh; padding: 42px 15px; }
+ .intro .eyebrow { font-size: 12px; letter-spacing: .12em; }
+ .hero-names, .ending .hero-names { font-size: clamp(74px, 19vw, 107px); }
+ .section-title { font-size: clamp(47px, 11.2vw, 67px); line-height: 1.03; margin: 10px auto 21px; }
+ .statement { font-size: clamp(24px, 6.8vw, 31px); letter-spacing: .01em; line-height: 1.23; }
+ .body-copy { font-size: clamp(23px, 6.2vw, 28px); line-height: 1.34; margin-bottom: 18px; }
+ .serif-italic { font-size: clamp(28px, 7.2vw, 36px); line-height: 1.27; }
+ .guide { font-size: 26px; }
+ .scripture { min-height: 72svh; }
+ .scripture blockquote { font-size: clamp(37px, 9.5vw, 49px); }
+ .locations { padding: 54px 12px 70px; }
+ .locations .eyebrow { margin-bottom: 23px; }
+ .location-block { border-radius: 8px; }
+ .location-image { height: clamp(330px, 87vw, 410px); }
+ .location-content { padding: 23px 16px 30px; }
+ .location-content h2 { font-size: clamp(43px, 11vw, 55px); line-height: 1.03; }
+ .location-name { font-size: clamp(28px, 7.5vw, 37px); }
+ .location-kicker { font-size: 12px; }
+ .pending { font-size: 25px; }
+ .countdown { min-height: 70svh; }
+ .count-units { gap: 7px; margin: 27px auto 20px; }
+ .count-units>div { width: min(21vw, 95px); }
+ .count-units strong { font-size: clamp(31px, 8vw, 41px); }
+ .count-units small { font-size: 10px; letter-spacing: .02em; }
+ .adults { min-height: 65svh; }
+ .dress { min-height: 0; }
+ .dress-item p { font-size: clamp(23px, 6vw, 27px); line-height: 1.3; }
+ .dress-item h3 { font-size: 44px; }
+ .swatches { gap: 19px 6px; margin: 28px auto; }
+ .swatches div { font-size: 11px; }
+ .swatches i { width: clamp(45px, 12vw, 67px); }
+ .reserved-note { font-size: 25px; }
+ .rsvp-form { max-width: 100%; padding: 19px 15px; margin-top: 27px; }
+ .rsvp-form input, .rsvp-form select { font-size: 16px; }
+ .rsvp-form label { font-size: 13px; }
+ .ending { min-height: 77svh; padding-bottom: 80px; }
+ .ending .body-copy { margin-top: 28px; }
+ .fine-note { font-size: 15px; line-height: 1.55; }
+ .music-toggle { min-height: 49px; font-size: 12px; }
+}
+@media (max-width: 375px) {
+ .cover { padding-top: 13px; padding-bottom: 13px; }
+ .envelope-stage { height: clamp(213px, 29svh, 254px); }
+ .envelope { height: clamp(187px, 25svh, 225px); }
+ .cover-names { font-size: 29px; }
+ .cover-subtitle { font-size: 21px; }
+ .count-units { gap: 3px; }
+ .count-units small { font-size: 9px; }
+ .scene { padding: 58px 15px; }
+ .locations { padding-left: 10px; padding-right: 10px; }
+}
