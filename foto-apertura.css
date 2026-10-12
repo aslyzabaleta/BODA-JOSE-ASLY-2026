@@ -1,0 +1,25 @@
+/* La foto elegida se muestra completa dentro de la tarjeta que sale del sobre. */
+.portrait-photo.has-photo {
+  background-size: contain !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff9ef;
+}
+.portrait-card {
+  width: 81%;
+  left: 9.5%;
+  height: clamp(295px, 36svh, 365px);
+  border-color: #c6a76e;
+  background: #fffaf0;
+  box-shadow: 0 13px 31px rgba(74,52,29,.20);
+}
+.portrait-caption { padding-inline: 5px; gap: 10px; font-size: 10px; letter-spacing: .08em; }
+@media (max-width: 700px) {
+  .portrait-card { width: 83%; left: 8.5%; height: clamp(252px, 34svh, 335px); }
+  .cover.is-opening .portrait-card { transform: translateY(-128px) scale(1); }
+  .portrait-caption { font-size: 9px; }
+}
+@media (max-width: 390px) {
+  .portrait-card { height: clamp(245px, 36svh, 305px); }
+  .cover.is-opening .portrait-card { transform: translateY(-113px) scale(1); }
+}
