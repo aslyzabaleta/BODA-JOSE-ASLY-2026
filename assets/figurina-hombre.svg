@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 390" role="img" aria-label="Maniquí masculino con guayabera blanca y pantalón clásico beige de dril">
+<defs><linearGradient id="linen" x1="0" x2="1"><stop stop-color="#d7ccbb"/><stop offset=".35" stop-color="#fffef8"/><stop offset=".65" stop-color="#f0ece4"/><stop offset="1" stop-color="#c4b7a3"/></linearGradient><linearGradient id="pants" x1="0" x2="1"><stop stop-color="#8a7962"/><stop offset=".35" stop-color="#d9c9af"/><stop offset=".7" stop-color="#c3ad92"/><stop offset="1" stop-color="#7a6956"/></linearGradient><linearGradient id="skin" x1="0" x2="1"><stop stop-color="#bd9676"/><stop offset=".5" stop-color="#f1d1b3"/><stop offset="1" stop-color="#b78d69"/></linearGradient></defs>
+<ellipse cx="140" cy="375" rx="60" ry="7" fill="#a08a66" opacity=".18"/>
+<path d="M123 64 L122 80 L112 89 L167 90 L154 78 L152 64Z" fill="url(#skin)" stroke="#b6906d"/>
+<ellipse cx="139" cy="40" rx="25" ry="34" fill="url(#skin)" stroke="#bb926f"/>
+<path d="M113 39 Q107 2 136 2 Q171 3 162 38 L160 23 Q143 24 126 15Z" fill="#514b45"/>
+<path d="M123 77 L103 88 Q92 92 91 106 L81 171 L88 211 Q94 214 101 205 L105 168 L108 151 L108 220 L171 220 L175 152 L179 170 L185 212 Q197 220 201 207 L194 158 L190 111 Q187 95 169 87 L153 77 L139 93Z" fill="url(#linen)" stroke="#b9a78b" stroke-width="1.7"/>
+<path d="M122 80 L140 107 L153 80 L147 116 L140 108 L132 116Z" fill="#f9f6f0" stroke="#c9b7a0"/>
+<path d="M139 108 L139 212" stroke="#b7a78e" stroke-width="1.4"/>
+<g fill="#927b5e"><circle cx="140" cy="129" r="1.7"/><circle cx="140" cy="149" r="1.7"/><circle cx="140" cy="170" r="1.7"/><circle cx="140" cy="192" r="1.7"/></g>
+<path d="M117 103 L117 207 M122 103 L122 207 M160 103 L160 207 M165 103 L165 207" stroke="#c6b493" stroke-opacity=".65" stroke-width="1.6"/>
+<path d="M108 149 L129 149 L129 166 L108 166 M152 149 L171 149 L171 166 L152 166" fill="none" stroke="#d4c3ab" stroke-width="1.5"/>
+<path d="M109 220 L173 220 L174 264 L163 354 L146 354 L138 262 L131 353 L113 353 L106 269Z" fill="url(#pants)" stroke="#8b7961" stroke-width="1.7"/>
+<path d="M139 244 L139 274 M120 226 L124 345 M158 226 L155 346" fill="none" stroke="#f1e5d2" opacity=".55" stroke-width="1.6"/>
+<path d="M113 352 L131 352 L132 368 Q119 376 96 371 L96 365Z M145 352 L165 352 L184 368 Q184 373 148 372Z" fill="#624b39" stroke="#4d392f" stroke-width="1.5"/>
+<path d="M81 191 Q86 194 94 191 L101 205 Q96 224 86 222 Q79 218 81 205Z M186 194 Q193 197 202 192 L203 210 Q204 221 195 223 Q185 221 185 211Z" fill="url(#skin)" stroke="#b58e6d"/>
+</svg>
