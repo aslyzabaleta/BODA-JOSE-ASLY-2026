@@ -1,0 +1,111 @@
+/* José & Asly — ajuste selectivo de flores, octubre de 2026.
+   Solo modifica presentación, lugares, cuenta regresiva y cierre.
+   Se conservan intactas las flores aprobadas de las demás escenas. */
+
+@keyframes florRespira {
+  from { transform:scale(1); }
+  to   { transform:scale(1.018); }
+}
+@keyframes florRespiraInvertida {
+  from { transform:scale(-1,-1); }
+  to   { transform:scale(-1.018,-1.018); }
+}
+@keyframes florRespiraHorizontal {
+  from { transform:scale(-1,1); }
+  to   { transform:scale(-1.018,1.018); }
+}
+@keyframes florRespiraVertical {
+  from { transform:scale(1,-1); }
+  to   { transform:scale(1.018,-1.018); }
+}
+
+/* La portada, Nuestra historia, versículo, adultos, vestuario,
+   colores reservados, lluvia de sobres y confirmación no se tocan. */
+
+/* Lo nuestro sigue floreciendo: se mantiene su ubicación original. */
+#presentacion > .blooms-right {
+  transform:scale(-1,-1);
+  transform-origin:center;
+  animation:florRespiraInvertida 15s ease-in-out infinite alternate;
+}
+
+/* Iglesia y recepción: flores en el perímetro, nunca sobre las fotos. */
+#lugares .venue-photo::after {
+  content:none;
+  display:none;
+}
+#lugares .venue-floral-field {
+  z-index:1;
+  overflow:hidden;
+}
+#lugares .location-bloom {
+  width:clamp(150px,19vw,250px);
+  opacity:.80;
+  transform-origin:center;
+  pointer-events:none;
+}
+#lugares .bloom-one {
+  top:-48px; left:-80px; right:auto; bottom:auto;
+  transform:scale(1);
+  animation:florRespira 15s ease-in-out infinite alternate;
+}
+#lugares .bloom-two {
+  top:-48px; right:-85px; left:auto; bottom:auto;
+  transform:scale(-1,1);
+  animation:florRespiraHorizontal 16s ease-in-out infinite alternate;
+}
+#lugares .bloom-three {
+  top:auto; bottom:16%; left:-115px; right:auto;
+  transform:scale(1,-1);
+  animation:florRespiraVertical 17s ease-in-out infinite alternate;
+}
+#lugares .bloom-four {
+  top:auto; bottom:-56px; right:-72px; left:auto;
+  transform:scale(-1,-1);
+  animation:florRespiraInvertida 15s ease-in-out infinite alternate;
+}
+
+/* Cuenta regresiva: rincón superior derecho, lejos del contador. */
+#cuenta-regresiva > .blooms-right {
+  top:-38px;
+  bottom:auto;
+  right:-45px;
+  width:clamp(145px,19vw,245px);
+  opacity:.82;
+  transform:scale(-1,-1);
+  transform-origin:center;
+  animation:florRespiraInvertida 15s ease-in-out infinite alternate;
+}
+#cuenta-regresiva > .scene-inner { z-index:3; }
+
+/* Cierre: la flor permanece en su esquina sin girar. */
+#cierre > .blooms-right {
+  transform:scale(-1,-1);
+  transform-origin:center;
+  animation:florRespiraInvertida 16s ease-in-out infinite alternate;
+}
+
+@media (max-width:700px) {
+  #lugares .location-bloom {
+    width:clamp(110px,31vw,158px);
+    opacity:.72;
+  }
+  #lugares .bloom-one { top:-28px; left:-55px; }
+  #lugares .bloom-two { top:-25px; right:-60px; }
+  #lugares .bloom-three { top:auto; bottom:18%; left:-67px; }
+  #lugares .bloom-four { bottom:-35px; right:-58px; }
+  #cuenta-regresiva > .blooms-right {
+    top:-37px;
+    right:-49px;
+    bottom:auto;
+    width:clamp(112px,31vw,158px);
+    opacity:.72;
+  }
+  #cierre > .blooms-right { opacity:.92; }
+}
+@media (prefers-reduced-motion:reduce) {
+  #presentacion > .blooms-right,
+  #lugares .location-bloom,
+  #cuenta-regresiva > .blooms-right,
+  #cierre > .blooms-right { animation:none !important; }
+}
