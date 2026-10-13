@@ -29,6 +29,7 @@
 <link rel="stylesheet" href="vestuario-nativo.css?v=20261013-13">
 <link rel="stylesheet" href="flores-esquinas-integradas.css?v=20261013-11">
 <link rel="stylesheet" href="flores-sin-bordes-final.css?v=20261013-12">
+<link rel="stylesheet" href="lugares-unificados.css?v=20261013-14">
 <script defer src="config.js?v=20261012-5"></script>
 <script defer src="script.js?v=20261012-6"></script>
 </head>
@@ -108,7 +109,7 @@
   <div class="cinema-glow" aria-hidden="true"></div><div class="scene-inner center"><span class="gilded-symbol reveal">✦</span><blockquote class="reveal">«Por encima de todo, vístanse de amor, que es el vínculo perfecto».</blockquote><p class="verse-reference reveal">Colosenses 3:14</p><div class="fine-line reveal"></div></div>
 </section>
 <!-- Una experiencia continua: ceremonia y recepción juntas; fotografías ORIGINALES sin recortes. -->
-<section class="scene locations animated-scene" id="lugares">
+<section class="scene locations animated-scene" id="lugares" aria-labelledby="venueDuoTitle">
   <div class="venue-floral-field" aria-hidden="true">
     <img class="blooms location-bloom bloom-one" src="assets/flor-rosa-real.webp" alt="">
     <img class="blooms location-bloom bloom-two" src="assets/flor-rosa-real-derecha.webp" alt="">
@@ -116,33 +117,39 @@
     <img class="blooms location-bloom bloom-four" src="assets/flor-rosa-real-derecha.webp" alt="">
   </div>
   <div class="scene-inner locations-inner">
-   <p class="eyebrow reveal">DOS LUGARES, UN MISMO DÍA</p>
-   <article class="venue-scene reveal" id="ceremonia">
-     <div class="venue-copy">
-       <p class="location-kicker">CEREMONIA RELIGIOSA</p>
-       <h2>Nuestro sí ante Dios</h2>
-       <div class="venue-hairline" aria-hidden="true">✦</div>
-       <p class="location-name">Iglesia San José de Majagual</p>
-       <p class="pending">Hora por confirmar</p>
-     </div>
-     <div class="venue-photo church-photo">
-       <img src="assets/iglesia-san-jose-majagual.webp" alt="Fotografía original y completa de la Iglesia San José de Majagual, fachada amarilla y techo verde" loading="lazy">
-     </div>
-   </article>
-   <div class="between-venues reveal" aria-hidden="true"><span>✦</span></div>
-   <article class="venue-scene reception-scene reveal" id="recepcion">
-     <div class="venue-copy">
-       <p class="location-kicker">RECEPCIÓN</p>
-       <h2>Y después, celebremos juntos</h2>
-       <div class="venue-hairline" aria-hidden="true">✦</div>
-       <p class="location-name">Gastro - bar Majagua</p>
-       <p class="pending">Barrio Panama</p>
-       <p class="pending">Hora por confirmar</p>
-     </div>
-     <div class="venue-photo reception-photo">
-       <img src="assets/gastro-bar-majagua.webp" alt="Fotografía real del Gastro-bar Majagua, letrero luminoso MAJAGUA completo" loading="lazy">
-     </div>
-   </article>
+    <header class="venue-duo-heading reveal">
+      <p class="venue-duo-eyebrow">DOS MOMENTOS, UN MISMO DÍA</p>
+      <h2 class="venue-duo-title" id="venueDuoTitle">Los lugares de nuestro gran día</h2>
+      <p class="venue-duo-subtitle">De nuestro sí a nuestra celebración</p>
+    </header>
+    <div class="venue-duo-layout">
+      <article class="venue-duo-card reveal" id="ceremonia" aria-labelledby="venueChurchTitle">
+        <figure class="venue-duo-photo venue-duo-photo-church">
+          <img src="assets/iglesia-san-jose-majagual.webp" alt="Iglesia San José de Majagual, fachada amarilla y techo verde" loading="lazy" decoding="async">
+        </figure>
+        <div class="venue-duo-copy">
+          <p class="venue-duo-kicker">CEREMONIA RELIGIOSA</p>
+          <h3 class="venue-duo-card-title" id="venueChurchTitle">Nuestro sí ante Dios</h3>
+          <span class="venue-duo-rule" aria-hidden="true"></span>
+          <p class="venue-duo-place">Iglesia San José de Majagual</p>
+          <p class="venue-duo-meta">Hora por confirmar</p>
+        </div>
+      </article>
+      <div class="venue-duo-connector" aria-hidden="true"><span>✦</span></div>
+      <article class="venue-duo-card reveal" id="recepcion" aria-labelledby="venueReceptionTitle">
+        <figure class="venue-duo-photo venue-duo-photo-reception">
+          <img src="assets/gastro-bar-majagua.webp" alt="Fotografía real del Gastro-bar Majagua, letrero luminoso MAJAGUA" loading="lazy" decoding="async">
+        </figure>
+        <div class="venue-duo-copy">
+          <p class="venue-duo-kicker">RECEPCIÓN</p>
+          <h3 class="venue-duo-card-title" id="venueReceptionTitle">Y después, celebremos juntos</h3>
+          <span class="venue-duo-rule" aria-hidden="true"></span>
+          <p class="venue-duo-place">Gastro - bar Majagua</p>
+          <p class="venue-duo-meta">Barrio Panama</p>
+          <p class="venue-duo-meta">Hora por confirmar</p>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 <section class="scene countdown animated-scene" id="cuenta-regresiva"><img class="blooms blooms-right" src="assets/flor-rosa-real.webp" alt="" aria-hidden="true"><div class="scene-inner center"><p class="eyebrow reveal">CADA DÍA MÁS CERCA</p><h2 class="section-title reveal">Faltan</h2><div class="count-units reveal"><div><strong id="days">—</strong><small>DÍAS</small></div><div><strong id="hours">—</strong><small>HORAS</small></div><div><strong id="minutes">—</strong><small>MINUTOS</small></div><div><strong id="seconds">—</strong><small>SEGUNDOS</small></div></div><p class="fine-note reveal" id="countNote">Cuenta hasta el comienzo del 26 de diciembre. La hora de la ceremonia está por confirmar.</p></div></section>
