@@ -115,3 +115,32 @@
   #vestuario .dress-native-figure{height:165px}
   #vestuario .dress-native-copy{font-size:18px}
 }
+
+
+/* Integración floral final: esta flor pertenece al fondo de la invitación,
+   no es una calcomanía ni una tarjeta sobre el vestuario. */
+#vestuario.dress > img.flower-dress{
+  left:-28px;
+  bottom:-42px;
+  width:clamp(155px,21vw,255px);
+  z-index:1;
+  opacity:.76;
+  mix-blend-mode:multiply;
+  filter:saturate(.86) blur(.3px);
+  -webkit-mask-image:radial-gradient(ellipse 69% 73% at 48% 51%,
+    #000 22%,rgba(0,0,0,.95) 38%,
+    rgba(0,0,0,.65) 55%,rgba(0,0,0,.24) 69%,transparent 83%);
+  mask-image:radial-gradient(ellipse 69% 73% at 48% 51%,
+    #000 22%,rgba(0,0,0,.95) 38%,
+    rgba(0,0,0,.65) 55%,rgba(0,0,0,.24) 69%,transparent 83%);
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+}
+@media(max-width:720px){
+  #vestuario.dress > img.flower-dress{
+    left:-40px;
+    bottom:-24px;
+    width:clamp(135px,38vw,186px);
+    opacity:.69;
+  }
+}
