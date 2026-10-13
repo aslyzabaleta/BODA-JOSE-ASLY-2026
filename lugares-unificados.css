@@ -93,10 +93,13 @@
   transition:none;
 }
 #lugares .venue-duo-photo-church img{
-  object-position:center 52%;
+  /* Prioriza la torre y la fachada, sin acercar demasiado el encuadre. */
+  object-position:center 12%;
 }
 #lugares .venue-duo-photo-reception img{
-  object-position:center 65%;
+  /* Mostrar MAJAGUA completo: nunca recortar los extremos del letrero. */
+  object-fit:contain;
+  object-position:center center;
 }
 #lugares .venue-duo-copy{
   position:relative;
