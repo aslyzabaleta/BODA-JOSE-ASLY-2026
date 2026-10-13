@@ -125,3 +125,64 @@
   -webkit-mask-repeat:no-repeat;
   mask-repeat:no-repeat;
 }
+
+
+/* AJUSTE V9 - flores de sobre, alternancia y fotos completas */
+/* Dos florecitas pequeñas sobre el papel frontal del sobre.
+   Son parte de la cara frontal y siguen visibles después de abrirlo. */
+#portada .envelope-front .envelope-mini-flower{
+  position:absolute;display:block;z-index:2;pointer-events:none;
+  bottom:6px;width:clamp(64px,11vw,92px);height:clamp(65px,12vw,96px);
+  background-position:center;background-repeat:no-repeat;background-size:contain;
+  opacity:.88;animation:none;
+  -webkit-mask-image:radial-gradient(ellipse at center,#000 32%,rgba(0,0,0,.93) 51%,rgba(0,0,0,.35) 70%,transparent 85%);
+  mask-image:radial-gradient(ellipse at center,#000 32%,rgba(0,0,0,.93) 51%,rgba(0,0,0,.35) 70%,transparent 85%);
+}
+#portada .envelope-front .envelope-mini-flower-left{
+  left:8px;background-image:url("assets/flor-rosa-real.webp");transform:rotate(-8deg);
+}
+#portada .envelope-front .envelope-mini-flower-right{
+  right:8px;background-image:url("assets/flor-rosa-real-derecha.webp");transform:rotate(8deg);
+}
+
+/* Alternar los bordes entre escenas:
+   el versículo termina a la derecha, lugares comienza a la izquierda;
+   lugares termina a la derecha, cuenta regresiva comienza a la izquierda. */
+#lugares .bloom-two{
+  top:32%;bottom:auto;right:-91px;left:auto;
+}
+#cuenta-regresiva > .blooms-right{
+  top:-39px;bottom:auto;left:-46px;right:auto;
+  transform:scale(1);transform-origin:center;
+  animation:florRespira 15s ease-in-out infinite alternate;
+}
+
+/* Mostrar completas las fotografías de la iglesia y de Majagua.
+   Borde desvanecido estrecho (3-4%), sin recorte circular ni oval. */
+#lugares .venue-photo::before{display:none;}
+#lugares .venue-photo img{
+  object-fit:contain;object-position:center;
+  border-radius:8px;
+  -webkit-mask-image:
+    linear-gradient(to right,transparent 0%,#000 3.5%,#000 96.5%,transparent 100%),
+    linear-gradient(to bottom,transparent 0%,#000 3.5%,#000 96.5%,transparent 100%);
+  mask-image:
+    linear-gradient(to right,transparent 0%,#000 3.5%,#000 96.5%,transparent 100%),
+    linear-gradient(to bottom,transparent 0%,#000 3.5%,#000 96.5%,transparent 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
+@media(max-width:700px){
+  #portada .envelope-front .envelope-mini-flower{
+    width:clamp(58px,17vw,78px);height:clamp(60px,18vw,80px);bottom:5px;
+  }
+  #portada .envelope-front .envelope-mini-flower-left{left:5px;}
+  #portada .envelope-front .envelope-mini-flower-right{right:5px;}
+  #lugares .bloom-two{top:32%;bottom:auto;right:-64px;left:auto;}
+  #cuenta-regresiva > .blooms-right{
+    top:-34px;bottom:auto;left:-43px;right:auto;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  #cuenta-regresiva > .blooms-right{animation:none!important;}
+}
