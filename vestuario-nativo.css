@@ -144,3 +144,37 @@
     opacity:.69;
   }
 }
+
+
+/* Enlace discreto al tablero de referencias aprobado por la pareja. */
+#vestuario .dress-native-more{
+  grid-column:1/-1;
+  margin:11px auto 0;
+  padding:0;
+  text-align:center;
+  font:500 13px/1.5 'DM Sans',sans-serif;
+  letter-spacing:.015em;
+}
+#vestuario .dress-native-more a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  padding:7px 8px;
+  color:#896a43;
+  border-bottom:1px solid rgba(153,119,71,.55);
+  text-decoration:none;
+  transition:color .2s ease,border-color .2s ease;
+}
+#vestuario .dress-native-more a:hover,
+#vestuario .dress-native-more a:focus-visible{
+  color:#62492f;
+  border-color:#896a43;
+}
+#vestuario .dress-native-more a:focus-visible{
+  outline:2px solid #a88655;
+  outline-offset:3px;
+}
+@media(max-width:720px){
+  #vestuario .dress-native-more{margin-top:8px;font-size:13px}
+}
