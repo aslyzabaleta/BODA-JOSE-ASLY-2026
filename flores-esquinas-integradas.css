@@ -1,0 +1,159 @@
+/* José & Asly · Acabados de esquinas florales y sobre.
+   Las ilustraciones del sobre son SVG nativos; las fotos de esquinas usan
+   un difuminado orientado hacia el interior para ocultar fondos rectangulares.
+   No se modifican textos, fotografías de la pareja ni estructura de secciones. */
+
+/* Dos ramitas botánicas dibujadas directamente en el frente del sobre. */
+#portada .envelope-front > svg.envelope-botanical{
+  display:block;position:absolute;z-index:3;pointer-events:none;
+  bottom:5%;width:clamp(62px,19%,84px);height:auto;
+  overflow:visible;opacity:.87;
+  filter:none;mix-blend-mode:multiply;
+  -webkit-mask-image:none;mask-image:none;
+}
+#portada .envelope-front > svg.envelope-botanical-left{
+  left:3.5%;right:auto;
+  transform:rotate(-4deg);transform-origin:25% 85%;
+}
+#portada .envelope-front > svg.envelope-botanical-right{
+  right:3.5%;left:auto;
+  transform:scaleX(-1) rotate(-4deg);transform-origin:75% 85%;
+}
+
+/* Las ilustraciones florales originales contienen fondo fotográfico.
+   Se evita el efecto de una fotografía rectangular sobre otra superficie. */
+#portada > img.blooms-cover-left,
+#portada > img.blooms-cover-right,
+#presentacion > img.blooms-right,
+#historia > img.blooms-left,
+#mensaje > img.flower-scripture-a,
+#mensaje > img.flower-scripture-b,
+#lugares .location-bloom,
+#cuenta-regresiva > img.blooms-right,
+#solo-adultos > img.flower-adults,
+#vestuario > img.flower-dress,
+#tonos-reservados > img.flower-reserved,
+#lluvia > img.blooms-left,
+#confirmacion > img.flower-rsvp,
+#cierre > img.blooms-right{
+  mix-blend-mode:multiply;
+  filter:saturate(.86) contrast(.97) !important;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+}
+
+/* Esquinas superiores izquierdas: el papel se funde hacia abajo y a la derecha. */
+#portada > img.blooms-cover-left,
+#historia > img.blooms-left,
+#mensaje > img.flower-scripture-a,
+#cuenta-regresiva > img.blooms-right,
+#lugares .bloom-one,
+#lluvia > img.blooms-left,
+#confirmacion > img.flower-rsvp{
+  opacity:.86;
+  -webkit-mask-image:
+    linear-gradient(to right,#000 0%,#000 37%,rgba(0,0,0,.86) 57%,rgba(0,0,0,.34) 77%,transparent 100%),
+    linear-gradient(to bottom,#000 0%,#000 41%,rgba(0,0,0,.84) 59%,rgba(0,0,0,.32) 77%,transparent 100%);
+  mask-image:
+    linear-gradient(to right,#000 0%,#000 37%,rgba(0,0,0,.86) 57%,rgba(0,0,0,.34) 77%,transparent 100%),
+    linear-gradient(to bottom,#000 0%,#000 41%,rgba(0,0,0,.84) 59%,rgba(0,0,0,.32) 77%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+}
+
+/* Esquinas superiores derechas: conservar el ramo del borde exterior. */
+#portada > img.blooms-cover-right,
+#solo-adultos > img.flower-adults,
+#tonos-reservados > img.flower-reserved,
+#lugares .bloom-two{
+  opacity:.83;
+  -webkit-mask-image:
+    linear-gradient(to left,#000 0%,#000 38%,rgba(0,0,0,.86) 57%,rgba(0,0,0,.34) 77%,transparent 100%),
+    linear-gradient(to bottom,#000 0%,#000 42%,rgba(0,0,0,.83) 60%,rgba(0,0,0,.31) 79%,transparent 100%);
+  mask-image:
+    linear-gradient(to left,#000 0%,#000 38%,rgba(0,0,0,.86) 57%,rgba(0,0,0,.34) 77%,transparent 100%),
+    linear-gradient(to bottom,#000 0%,#000 42%,rgba(0,0,0,.83) 60%,rgba(0,0,0,.31) 79%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+}
+
+/* Vestuario: esquina inferior izquierda. En particular se desvanece la línea
+   superior y el borde derecho que antes delataban la imagen original. */
+#vestuario.dress > img.blooms.flower-dress{
+  left:-31px;bottom:-29px;right:auto;top:auto;
+  width:clamp(160px,21vw,252px);
+  z-index:1;opacity:.83;
+  -webkit-mask-image:
+    linear-gradient(to right,#000 0%,#000 44%,rgba(0,0,0,.88) 61%,rgba(0,0,0,.38) 77%,transparent 100%),
+    linear-gradient(to top,#000 0%,#000 47%,rgba(0,0,0,.90) 62%,rgba(0,0,0,.38) 79%,transparent 100%);
+  mask-image:
+    linear-gradient(to right,#000 0%,#000 44%,rgba(0,0,0,.88) 61%,rgba(0,0,0,.38) 77%,transparent 100%),
+    linear-gradient(to top,#000 0%,#000 47%,rgba(0,0,0,.90) 62%,rgba(0,0,0,.38) 79%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+}
+
+/* Versículo: esquina inferior derecha. Mismo difuminado que la flor superior,
+   pero orientado desde abajo y desde el extremo derecho de la página. */
+#mensaje.scripture > img.blooms.flower-scripture-b{
+  right:-27px;bottom:-27px;left:auto;top:auto;
+  width:clamp(180px,22vw,287px);
+  z-index:1;opacity:.84;
+  -webkit-mask-image:
+    linear-gradient(to left,#000 0%,#000 42%,rgba(0,0,0,.85) 60%,rgba(0,0,0,.35) 79%,transparent 100%),
+    linear-gradient(to top,#000 0%,#000 43%,rgba(0,0,0,.86) 59%,rgba(0,0,0,.33) 78%,transparent 100%);
+  mask-image:
+    linear-gradient(to left,#000 0%,#000 42%,rgba(0,0,0,.85) 60%,rgba(0,0,0,.35) 79%,transparent 100%),
+    linear-gradient(to top,#000 0%,#000 43%,rgba(0,0,0,.86) 59%,rgba(0,0,0,.33) 78%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-composite:intersect;
+}
+#mensaje.scripture > img.blooms.flower-scripture-a{
+  left:-26px;top:-18px;right:auto;bottom:auto;
+  z-index:1;opacity:.84;
+}
+
+/* Algunos ramos rotan o se reflejan: un borde ovalado difuso evita
+   rectángulos visibles al animarse, sin cambiar sus movimientos originales. */
+#presentacion > img.blooms-right,
+#cierre > img.blooms-right,
+#lugares .bloom-three,
+#lugares .bloom-four{
+  opacity:.79;
+  -webkit-mask-image:radial-gradient(ellipse 94% 94% at 50% 50%,
+    #000 29%,rgba(0,0,0,.96) 45%,rgba(0,0,0,.72) 64%,rgba(0,0,0,.23) 82%,transparent 100%);
+  mask-image:radial-gradient(ellipse 94% 94% at 50% 50%,
+    #000 29%,rgba(0,0,0,.96) 45%,rgba(0,0,0,.72) 64%,rgba(0,0,0,.23) 82%,transparent 100%);
+}
+
+/* Texto y navegación siempre encima de las flores de fondo. */
+#mensaje > .scene-inner,
+#vestuario > .scene-inner,
+#solo-adultos > .scene-inner,
+#tonos-reservados > .scene-inner,
+#confirmacion > .scene-inner{
+  position:relative;z-index:3;
+}
+
+@media(max-width:720px){
+  #portada .envelope-front > svg.envelope-botanical{
+    bottom:4%;width:clamp(53px,18%,72px);opacity:.84;
+  }
+  #portada .envelope-front > svg.envelope-botanical-left{left:3%}
+  #portada .envelope-front > svg.envelope-botanical-right{right:3%}
+  #mensaje.scripture > img.blooms.flower-scripture-a{
+    width:clamp(128px,35vw,174px);left:-31px;top:-17px;opacity:.79;
+  }
+  #mensaje.scripture > img.blooms.flower-scripture-b{
+    width:clamp(128px,35vw,174px);right:-29px;bottom:-23px;opacity:.80;
+  }
+  #vestuario.dress > img.blooms.flower-dress{
+    width:clamp(132px,37vw,185px);left:-30px;bottom:-20px;opacity:.80;
+  }
+  #solo-adultos > img.flower-adults,
+  #tonos-reservados > img.flower-reserved{
+    opacity:.75;
+  }
+}
+@media(max-width:370px){
+  #portada .envelope-front > svg.envelope-botanical{
+    width:clamp(49px,17.5%,59px);
+    bottom:4%;
+  }
+}
