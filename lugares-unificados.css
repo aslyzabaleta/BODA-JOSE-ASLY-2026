@@ -1,0 +1,239 @@
+/* José & Asly · Ceremonia y recepción en un solo capítulo.
+   Fotografías ORIGINALES en formato de referencia, textos HTML editables.
+   Sin mapas ni enlaces de ubicación. No altera los estilos de otras escenas. */
+
+#lugares.locations{
+  min-height:0;
+  padding:clamp(56px,6vw,86px) 18px clamp(58px,6vw,86px);
+  background:linear-gradient(175deg,#f7efe2 0%,#fffaf0 48%,#f4e6d2 100%);
+}
+#lugares .locations-inner{
+  max-width:1080px;
+  margin-inline:auto;
+}
+#lugares .venue-duo-heading{
+  position:relative;
+  z-index:3;
+  text-align:center;
+  margin:0 auto clamp(26px,3vw,39px);
+  padding-inline:10px;
+}
+#lugares .venue-duo-eyebrow{
+  margin:0 auto 6px;
+  font:500 11px/1.45 'DM Sans',sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.19em;
+  color:#9b7549;
+}
+#lugares .venue-duo-title{
+  margin:0;
+  font-family:'Cormorant Garamond',serif;
+  font-weight:500;
+  line-height:1.05;
+  font-size:clamp(40px,4.8vw,61px);
+  color:#8d683e;
+}
+#lugares .venue-duo-subtitle{
+  margin:6px auto 0;
+  font:italic 500 clamp(17px,1.9vw,22px)/1.25 'Cormorant Garamond',serif;
+  color:#978163;
+}
+#lugares .venue-duo-layout{
+  position:relative;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 34px minmax(0,1fr);
+  gap:clamp(9px,1.4vw,18px);
+  align-items:stretch;
+  max-width:1030px;
+  margin:0 auto;
+}
+#lugares .venue-duo-card{
+  display:grid;
+  grid-template-columns:clamp(125px,12vw,155px) minmax(0,1fr);
+  gap:clamp(16px,2vw,23px);
+  align-items:center;
+  min-width:0;
+  margin:0;
+  padding:clamp(16px,2vw,23px);
+  border:1px solid rgba(176,145,104,.27);
+  border-radius:7px;
+  background:linear-gradient(155deg,rgba(255,252,245,.69),rgba(255,249,240,.43));
+  box-shadow:0 10px 28px rgba(116,84,47,.045);
+}
+#lugares .venue-duo-card::before,
+#lugares .venue-duo-card::after{content:none}
+#lugares .venue-duo-photo{
+  width:100%;
+  aspect-ratio:4/5;
+  margin:0;
+  padding:5px;
+  border:1px solid rgba(179,149,105,.30);
+  background:rgba(255,253,249,.74);
+  box-shadow:0 5px 16px rgba(104,71,39,.08);
+  border-radius:4px;
+  overflow:hidden;
+  align-self:center;
+}
+#lugares .venue-duo-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  border-radius:2px;
+  /* bordes suaves, sin el halo o recorte rectangular duro */
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),
+                     linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
+  mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),
+             linear-gradient(to bottom,transparent,#000 6%,#000 94%,transparent);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+  filter:saturate(.94) contrast(1.01);
+  transform:none;
+  transition:none;
+}
+#lugares .venue-duo-photo-church img{
+  object-position:center 52%;
+}
+#lugares .venue-duo-photo-reception img{
+  object-position:center 65%;
+}
+#lugares .venue-duo-copy{
+  position:relative;
+  z-index:2;
+  min-width:0;
+  text-align:left;
+  padding:2px 0;
+}
+#lugares .venue-duo-kicker{
+  font:600 10px/1.5 'DM Sans',sans-serif;
+  letter-spacing:.16em;
+  color:#a27b49;
+  margin:0 0 7px;
+}
+#lugares .venue-duo-card-title{
+  font:500 clamp(28px,2.7vw,36px)/1 'Cormorant Garamond',serif;
+  color:#916b38;
+  margin:0 0 9px;
+}
+#lugares .venue-duo-rule{
+  display:block;
+  width:42px;
+  height:1px;
+  background:linear-gradient(90deg,#c4a16b,transparent);
+  margin:0 0 10px;
+}
+#lugares .venue-duo-place{
+  font:500 clamp(21px,2vw,27px)/1.12 'Cormorant Garamond',serif;
+  color:#705638;
+  margin:0 0 7px;
+}
+#lugares .venue-duo-meta{
+  font:italic 500 clamp(17px,1.65vw,20px)/1.2 'Cormorant Garamond',serif;
+  color:#997e5b;
+  margin:4px 0 0;
+}
+#lugares .venue-duo-connector{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#b28c55;
+  font-size:16px;
+  align-self:stretch;
+}
+#lugares .venue-duo-connector::before{
+  content:'';
+  position:absolute;
+  width:1px;
+  height:58%;
+  background:linear-gradient(to bottom,transparent,rgba(169,132,81,.45),transparent);
+  left:50%;
+  top:21%;
+}
+#lugares .venue-duo-connector span{
+  position:relative;
+  z-index:1;
+  background:#fbf2e6;
+  padding:5px 0;
+  line-height:1;
+}
+/* El fondo floral sigue siendo el mismo de la invitación; no invade las tarjetas */
+#lugares .venue-floral-field{z-index:1;overflow:hidden}
+#lugares .locations-inner{position:relative;z-index:3}
+#lugares .location-bloom{opacity:.58}
+
+@media(max-width:930px){
+  #lugares.locations{padding:54px 15px 63px}
+  #lugares .venue-duo-heading{margin-bottom:21px}
+  #lugares .venue-duo-layout{
+    max-width:650px;
+    grid-template-columns:minmax(0,1fr);
+    gap:0;
+  }
+  #lugares .venue-duo-card{
+    grid-template-columns:clamp(125px,27vw,153px) minmax(0,1fr);
+    gap:20px;
+    padding:16px 23px;
+  }
+  #lugares .venue-duo-connector{
+    height:28px;
+    min-height:28px;
+    font-size:14px;
+  }
+  #lugares .venue-duo-connector::before{
+    width:40%;
+    max-width:155px;
+    height:1px;
+    top:50%;left:50%;
+    transform:translateX(-50%);
+    background:linear-gradient(to right,transparent,rgba(169,132,81,.45),transparent);
+  }
+  #lugares .venue-duo-connector span{
+    padding:0 10px;
+  }
+}
+@media(max-width:500px){
+  #lugares.locations{padding:43px 14px 52px}
+  #lugares .venue-duo-heading{margin-bottom:17px}
+  #lugares .venue-duo-eyebrow{font-size:9px;letter-spacing:.17em}
+  #lugares .venue-duo-title{font-size:clamp(35px,9.2vw,44px)}
+  #lugares .venue-duo-subtitle{font-size:18px;margin-top:3px}
+  #lugares .venue-duo-layout{max-width:410px}
+  #lugares .venue-duo-card{
+    grid-template-columns:clamp(94px,28vw,117px) minmax(0,1fr);
+    gap:12px;
+    padding:11px;
+    border-radius:6px;
+  }
+  #lugares .venue-duo-photo{
+    padding:4px;
+  }
+  #lugares .venue-duo-kicker{
+    font-size:9px;
+    letter-spacing:.10em;
+    margin-bottom:5px;
+  }
+  #lugares .venue-duo-card-title{
+    font-size:clamp(25px,7vw,30px);
+    line-height:1.02;
+    margin-bottom:6px;
+  }
+  #lugares .venue-duo-rule{margin-bottom:7px;width:32px}
+  #lugares .venue-duo-place{
+    font-size:clamp(19px,5.55vw,23px);
+    margin-bottom:3px;
+  }
+  #lugares .venue-duo-meta{font-size:clamp(16px,4.7vw,19px);margin-top:3px}
+  #lugares .venue-duo-connector{height:23px;min-height:23px}
+  #lugares .location-bloom{opacity:.48}
+}
+@media(max-width:350px){
+  #lugares .venue-duo-card{grid-template-columns:85px minmax(0,1fr);gap:9px;padding:8px}
+  #lugares .venue-duo-card-title{font-size:24px}
+  #lugares .venue-duo-place{font-size:18px}
+  #lugares .venue-duo-meta{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){
+  #lugares .venue-duo-photo img{transition:none!important;transform:none!important}
+}
