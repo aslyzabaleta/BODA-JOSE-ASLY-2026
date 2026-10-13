@@ -79,7 +79,7 @@ function updateClock(){
  const remaining=Math.max(0,target.getTime()-Date.now());
  const parts={days:Math.floor(remaining/86400000),hours:Math.floor((remaining%86400000)/3600000),minutes:Math.floor((remaining%3600000)/60000),seconds:Math.floor((remaining%60000)/1000)};
  Object.entries(parts).forEach(([id,n])=>$(id).textContent=id==='days'?String(n):String(n).padStart(2,'0'));
- $('countNote').textContent=hasHour?'Cuenta hasta la hora de la ceremonia confirmada.':'Cuenta hasta el comienzo del 26 de diciembre (hora de Colombia). La hora de la ceremonia está por confirmar.';
+ $('countNote').textContent='Para decir “sí, acepto” frente a Dios, nuestra familia y amigos.';
 }
 updateClock();window.setInterval(updateClock,1000);
 const token=new URLSearchParams(location.search).get('invitado');
