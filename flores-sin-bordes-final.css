@@ -1,0 +1,129 @@
+/* José & Asly — acabado floral coherente con las flores ORIGINALES.
+   Corrección de bordes fotográficos rectangulares en las esquinas.
+   Sobres: mismas flores rosas originales, acercadas y difuminadas.
+   Los títulos, fotografías, vestuario y animaciones permanecen intactos. */
+
+/* 1. Sobre de apertura: en vez de dibujos ajenos, mostrar las mismas rosas
+   fotográficas utilizadas en todas las escenas, centradas sobre su flor.
+   El encuadre oculta las líneas y marcos del archivo de origen. */
+#portada .envelope-front > .envelope-photo-flower{
+  position:absolute;display:block;pointer-events:none;z-index:3;
+  width:clamp(65px,16%,93px);
+  aspect-ratio:1/1;height:auto;bottom:4%;
+  opacity:.80;
+  background-size:155% auto;
+  background-repeat:no-repeat;
+  mix-blend-mode:multiply;
+  filter:saturate(.91) contrast(.96);
+  -webkit-mask-image:radial-gradient(ellipse 55% 54% at 50% 50%,
+     #000 17%,rgba(0,0,0,.95) 36%,rgba(0,0,0,.68) 54%,
+     rgba(0,0,0,.24) 71%,transparent 90%);
+  mask-image:radial-gradient(ellipse 55% 54% at 50% 50%,
+     #000 17%,rgba(0,0,0,.95) 36%,rgba(0,0,0,.68) 54%,
+     rgba(0,0,0,.24) 71%,transparent 90%);
+  -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+}
+#portada .envelope-front > .envelope-photo-flower-left{
+  left:2.8%;right:auto;
+  background-image:url("assets/flor-rosa-real.webp");
+  background-position:26% 66%;
+  transform:rotate(-5deg);
+}
+#portada .envelope-front > .envelope-photo-flower-right{
+  right:2.8%;left:auto;
+  background-image:url("assets/flor-rosa-real-derecha.webp");
+  background-position:74% 66%;
+  transform:rotate(5deg);
+}
+
+/* 2. Fondo floral: los archivos originales contienen márgenes de papel.
+   Un único difuminado radial, centrado en la rosa, evita los bordes
+   rectangulares visibles que dejaban las máscaras lineales antiguas. */
+#portada > img.blooms-cover-left,
+#portada > img.blooms-cover-right,
+#presentacion > img.blooms-right,
+#historia > img.blooms-left,
+#mensaje > img.flower-scripture-a,
+#mensaje > img.flower-scripture-b,
+#solo-adultos > img.flower-adults,
+#vestuario > img.flower-dress,
+#tonos-reservados > img.flower-reserved,
+#lluvia > img.blooms-left,
+#confirmacion > img.flower-rsvp,
+#cierre > img.blooms-right,
+#lugares .location-bloom,
+#cuenta-regresiva > img.blooms-right{
+  -webkit-mask-image:radial-gradient(ellipse 62% 51% at 50% 63%,
+      #000 17%,rgba(0,0,0,.97) 37%,rgba(0,0,0,.75) 56%,
+      rgba(0,0,0,.29) 72%,transparent 91%) !important;
+  mask-image:radial-gradient(ellipse 62% 51% at 50% 63%,
+      #000 17%,rgba(0,0,0,.97) 37%,rgba(0,0,0,.75) 56%,
+      rgba(0,0,0,.29) 72%,transparent 91%) !important;
+  -webkit-mask-repeat:no-repeat!important;
+  mask-repeat:no-repeat!important;
+  -webkit-mask-size:100% 100%!important;
+  mask-size:100% 100%!important;
+  mix-blend-mode:multiply;
+  filter:saturate(.87) contrast(.96);
+}
+
+/* 3. Iglesia y recepción: tamaño, posición y transparencia seguros.
+   Ningún borde duro ocupa el extremo derecho o izquierdo de las fotos. */
+#lugares .venue-floral-field{overflow:hidden;pointer-events:none;}
+#lugares .location-bloom{
+  width:clamp(145px,19vw,235px);
+  opacity:.72;
+  pointer-events:none;
+}
+#lugares .bloom-one{left:-84px;top:-60px;}
+#lugares .bloom-two{right:-92px;top:31%;}
+#lugares .bloom-three{left:-98px;top:52%;}
+#lugares .bloom-four{right:-90px;bottom:-49px;}
+
+/* 4. Las dos esquinas del versículo y la del vestuario.
+   Estas flores se funden con el fondo; la lectura está por encima. */
+#mensaje.scripture > img.flower-scripture-a{
+  top:-27px;left:-45px;right:auto;bottom:auto;
+  width:clamp(165px,20vw,255px);
+  opacity:.79;z-index:1;
+}
+#mensaje.scripture > img.flower-scripture-b{
+  bottom:-38px;right:-43px;left:auto;top:auto;
+  width:clamp(165px,20vw,255px);
+  opacity:.79;z-index:1;
+}
+#vestuario.dress > img.flower-dress{
+  left:-39px;bottom:-31px;right:auto;top:auto;
+  width:clamp(150px,20vw,230px);
+  opacity:.76;z-index:1;
+}
+#mensaje > .scene-inner,
+#vestuario > .scene-inner,
+#lugares .locations-inner{position:relative;z-index:3;}
+
+/* Preservar flores de borde grandes en portada; eliminar su borde de papel. */
+#portada > img.blooms-cover-left,
+#portada > img.blooms-cover-right{opacity:.87;}
+
+@media(max-width:720px){
+  #portada .envelope-front > .envelope-photo-flower{
+    width:clamp(50px,17%,66px);
+    bottom:3.4%;opacity:.78;
+  }
+  #portada .envelope-front > .envelope-photo-flower-left{left:2.6%;}
+  #portada .envelope-front > .envelope-photo-flower-right{right:2.6%;}
+  #lugares .location-bloom{width:clamp(120px,36vw,166px);opacity:.67}
+  #lugares .bloom-one{left:-64px;top:-34px;}
+  #lugares .bloom-two{right:-73px;top:32%;}
+  #lugares .bloom-three{left:-76px;top:53%;}
+  #lugares .bloom-four{right:-73px;bottom:-39px;}
+  #mensaje.scripture > img.flower-scripture-a{
+    width:clamp(125px,36vw,170px);left:-35px;top:-22px;opacity:.75;
+  }
+  #mensaje.scripture > img.flower-scripture-b{
+    width:clamp(125px,36vw,170px);right:-37px;bottom:-30px;opacity:.75;
+  }
+  #vestuario.dress > img.flower-dress{
+    width:clamp(128px,36vw,172px);left:-35px;bottom:-24px;opacity:.73;
+  }
+}
