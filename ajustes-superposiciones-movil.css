@@ -172,3 +172,50 @@
   #historia .story-pictures{margin-bottom:43px}
   #vestuario .dress-mobile-copy{font-size:18px}
 }
+
+
+/* Sobre: florecitas integradas en las esquinas inferiores del papel.
+   Corrige los recortes rígidos, desplazamientos y cambios de escala previos. */
+#portada .envelope-front .envelope-mini-flower{
+  position:absolute;
+  bottom:8px;
+  width:clamp(48px,7vw,64px);
+  height:clamp(49px,7.5vw,66px);
+  background-size:contain;
+  background-position:50% 52%;
+  background-repeat:no-repeat;
+  opacity:.76;
+  mix-blend-mode:multiply;
+  filter:saturate(.84) contrast(.97) blur(.2px);
+  -webkit-mask-image:radial-gradient(ellipse 65% 68% at 50% 51%,
+    #000 14%,rgba(0,0,0,.93) 32%,
+    rgba(0,0,0,.55) 51%,rgba(0,0,0,.18) 65%,transparent 79%);
+  mask-image:radial-gradient(ellipse 65% 68% at 50% 51%,
+    #000 14%,rgba(0,0,0,.93) 32%,
+    rgba(0,0,0,.55) 51%,rgba(0,0,0,.18) 65%,transparent 79%);
+  -webkit-mask-size:100% 100%;
+  mask-size:100% 100%;
+  -webkit-mask-repeat:no-repeat;
+  mask-repeat:no-repeat;
+  pointer-events:none;
+}
+#portada .envelope-front .envelope-mini-flower-left{
+  left:10px;
+  right:auto;
+  transform:rotate(-5deg);
+}
+#portada .envelope-front .envelope-mini-flower-right{
+  right:10px;
+  left:auto;
+  transform:rotate(5deg);
+}
+@media(max-width:720px){
+  #portada .envelope-front .envelope-mini-flower{
+    width:clamp(42px,11vw,53px);
+    height:clamp(44px,11.5vw,56px);
+    bottom:7px;
+    opacity:.72;
+  }
+  #portada .envelope-front .envelope-mini-flower-left{left:7px;}
+  #portada .envelope-front .envelope-mini-flower-right{right:7px;}
+}
