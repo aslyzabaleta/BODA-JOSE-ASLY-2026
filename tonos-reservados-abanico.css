@@ -158,7 +158,7 @@
     transition:opacity 1250ms ease,translate 1500ms cubic-bezier(.16,.7,.16,1);
   }
   html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan .reserved-fan-svg {
-    transform:scaleX(.12) rotate(-6deg);
+    transform:scaleX(.12) rotate(19deg);
     transition:transform 1750ms cubic-bezier(.15,.72,.21,1) 90ms;
   }
   html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan.motion-in{
@@ -166,7 +166,7 @@
     translate:0 0;
   }
   html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan.motion-in .reserved-fan-svg{
-    transform:scaleX(1) rotate(0);
+    transform:scaleX(1) rotate(25deg);
   }
 }
 #tonos-reservados .reserved-fan-caption,
@@ -337,5 +337,112 @@
   #tonos-reservados .reserved-letter {
     animation:none!important;
     transition:none!important;
+  }
+}
+
+
+/* Corrección aprobada del boceto: carta VERTICAL, abanico inclinado y nota HORIZONTAL.
+   Solo se altera la composición; se conservan 11 colores, 33 pliegues, grabado y flor. */
+#tonos-reservados .reserved-stage {min-height:680px;}
+#tonos-reservados .reserved-letter-wrap {
+  top:22px;
+  left:8%;
+  width:43%;
+  padding-bottom:62px;
+}
+#tonos-reservados .reserved-letter {
+  min-height:552px;
+  padding:40px 38px 89px;
+}
+#tonos-reservados .reserved-letter-title {
+  font-size:clamp(47px,5.1vw,68px);
+  max-width:320px;
+  line-height:.99;
+}
+#tonos-reservados .reserved-letter-message {
+  font-size:clamp(22px,2.45vw,28px);
+  line-height:1.3;
+  max-width:305px;
+}
+#tonos-reservados .reserved-fan-figure {
+  top:174px;
+  right:1.5%;
+  width:58%;
+  max-width:580px;
+}
+#tonos-reservados .reserved-fan-svg {
+  transform:rotate(25deg);
+  transform-origin:50% 90%;
+}
+#tonos-reservados .reserved-note-card {
+  width:min(100%,880px);
+  max-width:880px;
+  padding:25px 42px;
+}
+@media (min-width:621px) and (max-width:850px) {
+  #tonos-reservados .reserved-stage {min-height:655px;}
+  #tonos-reservados .reserved-letter-wrap {left:3%;width:49%;}
+  #tonos-reservados .reserved-letter {min-height:535px;padding:34px 32px 90px;}
+  #tonos-reservados .reserved-fan-figure {top:198px;right:0;width:65%;}
+}
+@media (max-width:620px) {
+  #tonos-reservados .reserved-stage {
+    min-height:0;
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+  }
+  #tonos-reservados .reserved-letter-wrap {
+    position:relative;
+    top:auto;
+    left:auto;
+    width:79%;
+    max-width:340px;
+    align-self:flex-start;
+    margin:0 0 0 4%;
+    padding-bottom:42px;
+  }
+  #tonos-reservados .reserved-letter {
+    min-height:480px;
+    padding:35px 24px 141px;
+    transform:rotate(-.9deg);
+  }
+  #tonos-reservados .reserved-letter-title {
+    font-size:clamp(44px,11vw,59px);
+    line-height:1.02;
+    margin-bottom:20px;
+  }
+  #tonos-reservados .reserved-letter-message {
+    font-size:clamp(21px,5.8vw,27px);
+    line-height:1.26;
+  }
+  #tonos-reservados .reserved-fan-figure {
+    position:relative;
+    top:auto;
+    right:auto;
+    align-self:flex-end;
+    width:min(104%,430px);
+    max-width:430px;
+    margin:-208px 6px 6px auto;
+  }
+  #tonos-reservados .reserved-note-card {padding:22px 17px;}
+  #tonos-reservados .reserved-red-note {
+    font-size:clamp(25px,7vw,33px);
+    margin-bottom:8px;
+  }
+  #tonos-reservados .reserved-men-note {font-size:clamp(17px,5vw,21px);}
+}
+@media (max-width:365px) {
+  #tonos-reservados .reserved-letter-wrap {width:83%;margin-left:2%;}
+  #tonos-reservados .reserved-letter {
+    min-height:495px;
+    padding-inline:20px;
+    padding-bottom:149px;
+  }
+  #tonos-reservados .reserved-letter-title {font-size:43px;}
+  #tonos-reservados .reserved-letter-message {font-size:21px;}
+  #tonos-reservados .reserved-fan-figure {
+    margin-top:-194px;
+    margin-right:3px;
   }
 }
