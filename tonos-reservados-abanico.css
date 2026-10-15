@@ -1,0 +1,341 @@
+/* José & Asly · Tonos reservados: carta y abanico real plegado.
+   Implementación nativa HTML/CSS + SVG en línea, NO una imagen superpuesta.
+   Respeta la composición dibujada por la pareja y sus flores originales. */
+
+#tonos-reservados.reserved {
+  min-height: 0;
+  padding: clamp(82px,9vw,116px) clamp(13px,3vw,30px) clamp(80px,8vw,110px);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 15% 22%,rgba(255,252,245,.88),transparent 47%),
+    radial-gradient(ellipse at 82% 78%,rgba(225,190,176,.22),transparent 46%),
+    linear-gradient(165deg,#faf2e8 0%,#f8eee4 54%,#f4e6d9 100%);
+}
+#tonos-reservados .reserved-composition {
+  position:relative;
+  z-index:3;
+  width:min(100%,1010px);
+  max-width:1010px;
+  text-align:center;
+  margin:0 auto;
+}
+#tonos-reservados .reserved-eyebrow.eyebrow {
+  margin:0 auto 10px;
+  font:500 10px/1.8 'DM Sans',sans-serif;
+  letter-spacing:.30em;
+  color:#9a7955;
+}
+#tonos-reservados .reserved-ornament {
+  display:block;
+  margin:0 auto 17px;
+  width:98px;
+  height:17px;
+  color:#ad895b;
+  font:italic 400 21px/17px 'Cormorant Garamond',Georgia,serif;
+}
+#tonos-reservados .reserved-stage {
+  position:relative;
+  isolation:isolate;
+  min-height:510px;
+  width:100%;
+  max-width:980px;
+  margin:0 auto;
+}
+#tonos-reservados .reserved-letter-wrap {
+  position:absolute;
+  top:30px;
+  left:1.5%;
+  width:65%;
+  padding-bottom:59px;
+  z-index:2;
+}
+#tonos-reservados .reserved-letter {
+  position:relative;
+  isolation:isolate;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  min-height:378px;
+  padding:clamp(37px,5vw,56px) clamp(32px,5vw,59px) 71px;
+  text-align:left;
+  background:
+    repeating-linear-gradient(0deg,rgba(130,97,60,.015) 0px,rgba(130,97,60,.015) 1px,transparent 1px,transparent 6px),
+    linear-gradient(154deg,#fffefa 2%,#fff9f1 53%,#f7e9d9 100%);
+  border:1px solid rgba(176,139,89,.50);
+  box-shadow:12px 18px 0 rgba(224,202,177,.42),0 26px 48px rgba(102,72,45,.16);
+  transform:rotate(-1.35deg);
+}
+#tonos-reservados .reserved-letter::before{
+  content:"";position:absolute;inset:11px;
+  z-index:-1;pointer-events:none;
+  border:1px solid rgba(176,138,90,.20);
+}
+#tonos-reservados .reserved-letter::after{
+  content:"✧";position:absolute;bottom:24px;left:clamp(32px,5vw,59px);
+  font:italic 30px/1 'Cormorant Garamond',Georgia,serif;color:#b99b70;
+}
+#tonos-reservados .reserved-letter-title {
+  margin:0 0 24px;
+  max-width:390px;
+  font:400 clamp(49px,5.7vw,76px)/.95 'Cormorant Garamond',Georgia,serif;
+  letter-spacing:-.04em;
+  color:#916b45;
+}
+#tonos-reservados .reserved-letter-message {
+  max-width:370px;
+  font:400 clamp(23px,2.8vw,30px)/1.25 'Cormorant Garamond',Georgia,serif;
+  color:#735b47;
+  text-wrap:pretty;
+}
+#tonos-reservados .reserved-letter-envelope {
+  position:absolute;bottom:7px;left:50%;
+  width:91%;height:110px;
+  transform:translateX(-50%) rotate(.7deg);
+  background:linear-gradient(143deg,#e6cba7,#f7e9d3 48%,#e2c39d);
+  border:1px solid rgba(159,120,74,.45);
+  box-shadow:0 11px 20px rgba(86,60,35,.11);
+  clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);
+  z-index:-1;
+  pointer-events:none;
+}
+#tonos-reservados .reserved-letter-envelope::after {
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(27deg,transparent 49.7%,rgba(158,123,85,.28) 50%,transparent 50.35%),
+             linear-gradient(153deg,transparent 49.7%,rgba(158,123,85,.28) 50%,transparent 50.35%);
+  opacity:.65;
+}
+#tonos-reservados .reserved-fan-figure{
+  position:absolute;
+  z-index:5;
+  top:63px;
+  right:-.5%;
+  width:60%;
+  max-width:580px;
+  margin:0;
+  text-align:center;
+  pointer-events:auto;
+  filter:drop-shadow(0 19px 19px rgba(93,61,37,.18));
+}
+#tonos-reservados .reserved-fan-figure::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:16%;right:8%;bottom:10%;
+  height:27%;
+  border-radius:50%;
+  background:rgba(166,120,82,.11);
+  filter:blur(20px);
+  pointer-events:none;
+}
+#tonos-reservados .reserved-fan-svg {
+  width:100%;
+  max-width:580px;
+  height:auto;
+  display:block;
+  overflow:visible;
+  transform-origin:50% 90%;
+}
+#tonos-reservados .reserved-fan-color {
+  stroke:rgba(141,112,86,.24);
+  stroke-width:.8px;
+  stroke-linejoin:round;
+}
+#tonos-reservados .reserved-fan-color:nth-of-type(even){filter:brightness(.98);}
+#tonos-reservados .reserved-fan-caption {
+  margin:-10px 0 0 23%;
+  color:#93744e;
+  font:italic 400 clamp(17px,2vw,21px)/1.2 'Cormorant Garamond',Georgia,serif;
+  letter-spacing:.012em;
+  text-shadow:0 2px 8px rgba(255,252,245,.86);
+}
+
+/* En la sección real el abanico nace desde el papel y se abre al entrar. */
+@media (prefers-reduced-motion:no-preference) {
+  html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan{
+    opacity:0;
+    translate:0 30px;
+    transition:opacity 1250ms ease,translate 1500ms cubic-bezier(.16,.7,.16,1);
+  }
+  html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan .reserved-fan-svg {
+    transform:scaleX(.12) rotate(-6deg);
+    transition:transform 1750ms cubic-bezier(.15,.72,.21,1) 90ms;
+  }
+  html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan.motion-in{
+    opacity:1;
+    translate:0 0;
+  }
+  html.motion-ready #tonos-reservados .reserved-fan-figure.motion-fan.motion-in .reserved-fan-svg{
+    transform:scaleX(1) rotate(0);
+  }
+}
+#tonos-reservados .reserved-fan-caption,
+#tonos-reservados .reserved-fan-name {user-select:none;}
+#tonos-reservados .reserved-tones-disclosure {
+  position:relative;
+  z-index:6;
+  max-width:870px;
+  margin: -8px auto 21px;
+  font:500 12px/1.5 'DM Sans',Arial,sans-serif;
+  color:#8a6a49;
+}
+#tonos-reservados .reserved-tones-disclosure summary {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  padding:9px 13px;
+  cursor:pointer;
+  border-bottom:1px solid rgba(172,135,90,.58);
+  text-underline-offset:5px;
+  list-style:none;
+}
+#tonos-reservados .reserved-tones-disclosure summary::-webkit-details-marker{display:none;}
+#tonos-reservados .reserved-tones-disclosure summary::after {
+  content:"⌄";font-size:18px;line-height:1;
+  transition:transform .3s ease;
+}
+#tonos-reservados .reserved-tones-disclosure[open] summary::after{transform:rotate(180deg);}
+#tonos-reservados .reserved-tones-disclosure summary:focus-visible{
+  outline:2px solid #b38b56;outline-offset:4px;
+}
+#tonos-reservados .reserved-tones-list {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  column-gap:12px;
+  row-gap:12px;
+  list-style:none;
+  padding:24px 21px;
+  margin:13px auto 0;
+  max-width:770px;
+  border:1px solid rgba(190,155,111,.28);
+  border-radius:2px;
+  background:rgba(255,252,247,.88);
+  box-shadow:0 14px 28px rgba(112,85,54,.07);
+  text-align:left;
+}
+#tonos-reservados .reserved-tones-list li {
+  display:flex;align-items:center;gap:9px;
+  min-width:0;
+  font:500 11px/1.3 'DM Sans',Arial,sans-serif;
+  color:#71583f;
+}
+#tonos-reservados .reserved-tone-dot{
+  display:block;flex:none;
+  width:20px;height:20px;border-radius:50%;
+  background:var(--tone);
+  border:1px solid rgba(126,94,66,.28);
+  box-shadow:0 2px 6px rgba(88,56,35,.10);
+}
+#tonos-reservados .reserved-note-card {
+  position:relative;
+  z-index:3;
+  max-width:840px;
+  padding:clamp(27px,3vw,38px) clamp(24px,5vw,57px);
+  margin:24px auto 0;
+  background:linear-gradient(149deg,rgba(255,254,250,.96),rgba(250,238,226,.95));
+  border:1px solid rgba(172,137,91,.45);
+  box-shadow:7px 9px 0 rgba(230,208,183,.38),0 18px 37px rgba(100,70,42,.09);
+  transform:rotate(.3deg);
+  text-align:center;
+}
+#tonos-reservados .reserved-note-card::before{
+  content:"";pointer-events:none;position:absolute;inset:9px;
+  border:1px solid rgba(186,151,108,.17);
+}
+#tonos-reservados .reserved-red-note {
+  position:relative;
+  color:#8b614a;
+  font:italic 500 clamp(26px,3.5vw,37px)/1.16 'Cormorant Garamond',Georgia,serif;
+  margin:0 auto 13px;
+}
+#tonos-reservados .reserved-men-note {
+  position:relative;
+  font:400 clamp(18px,2.1vw,23px)/1.25 'Cormorant Garamond',Georgia,serif;
+  color:#91785e;
+  margin:0 auto;
+}
+#tonos-reservados .reserved-card-divider{
+  display:block;
+  width:120px;
+  height:1px;
+  margin:0 auto 13px;
+  background:linear-gradient(90deg,transparent,#c3a477,transparent);
+}
+@media(max-width:850px){
+  #tonos-reservados .reserved-stage{min-height:490px;}
+  #tonos-reservados .reserved-letter-wrap{width:66%;left:0;}
+  #tonos-reservados .reserved-fan-figure{width:62%;right:-1.5%;top:83px;}
+  #tonos-reservados .reserved-letter{min-height:360px;padding:36px 30px 72px;}
+  #tonos-reservados .reserved-letter-title{font-size:clamp(48px,7vw,66px);}
+  #tonos-reservados .reserved-letter-message{max-width:310px;font-size:clamp(22px,3vw,27px);}
+}
+@media(max-width:620px) {
+  #tonos-reservados.reserved{padding:74px 14px 76px;}
+  #tonos-reservados .reserved-eyebrow.eyebrow{font-size:9px;letter-spacing:.22em;}
+  #tonos-reservados .reserved-ornament{margin-bottom:8px;}
+  #tonos-reservados .reserved-stage{min-height:0;display:flex;flex-direction:column;align-items:stretch;}
+  #tonos-reservados .reserved-letter-wrap{
+    position:relative;top:auto;left:auto;
+    width:100%;max-width:445px;margin:0 auto;
+    padding-bottom:51px;
+  }
+  #tonos-reservados .reserved-letter{
+    min-height:385px;
+    transform:rotate(-.8deg);
+    padding:clamp(30px,7vw,42px) clamp(25px,6vw,35px) 127px;
+    box-shadow:7px 10px 0 rgba(227,203,181,.45),0 20px 42px rgba(99,70,40,.13);
+  }
+  #tonos-reservados .reserved-letter::before{inset:9px;}
+  #tonos-reservados .reserved-letter-title{
+    max-width:300px;
+    font-size:clamp(47px,11vw,62px);
+    margin-bottom:17px;
+  }
+  #tonos-reservados .reserved-letter-message{
+    max-width:285px;
+    font-size:clamp(23px,6vw,28px);
+    line-height:1.2;
+  }
+  #tonos-reservados .reserved-letter-envelope{height:94px;}
+  #tonos-reservados .reserved-fan-figure{
+    position:relative;top:auto;right:auto;
+    width:min(104%,440px);
+    max-width:440px;
+    align-self:flex-end;
+    margin:-187px -17px -6px auto;
+    filter:drop-shadow(0 13px 12px rgba(97,67,43,.14));
+  }
+  #tonos-reservados .reserved-fan-caption {
+    margin:-6px 0 0 21%;
+    font-size:17px;
+  }
+  #tonos-reservados .reserved-tones-disclosure{margin:2px auto 19px;}
+  #tonos-reservados .reserved-tones-list{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    padding:17px 14px;
+    gap:12px 8px;
+  }
+  #tonos-reservados .reserved-note-card{margin-top:20px;padding:25px 18px 29px;}
+  #tonos-reservados .reserved-red-note{font-size:clamp(27px,7.1vw,33px);}
+  #tonos-reservados .reserved-men-note{font-size:clamp(18px,5.15vw,22px);}
+}
+@media(max-width:365px){
+  #tonos-reservados .reserved-letter{
+    min-height:393px;
+    padding-inline:22px;
+  }
+  #tonos-reservados .reserved-letter-title{font-size:46px;}
+  #tonos-reservados .reserved-letter-message{font-size:22px;max-width:240px;}
+  #tonos-reservados .reserved-fan-figure{margin-top:-170px;margin-right:-16px;}
+  #tonos-reservados .reserved-note-card{padding-inline:14px;}
+}
+@media(prefers-reduced-motion:reduce){
+  #tonos-reservados .reserved-fan-figure,
+  #tonos-reservados .reserved-fan-svg,
+  #tonos-reservados .reserved-note-card,
+  #tonos-reservados .reserved-letter {
+    animation:none!important;
+    transition:none!important;
+  }
+}
