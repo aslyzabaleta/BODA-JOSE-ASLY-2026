@@ -89,12 +89,12 @@
   text-wrap:pretty;
 }
 #tonos-reservados .reserved-letter-envelope {
-  position:absolute;bottom:7px;left:50%;
-  width:91%;height:110px;
+  position:absolute;bottom:21px;left:50%;
+  width:89%;height:92px;
   transform:translateX(-50%) rotate(.7deg);
-  background:linear-gradient(143deg,#e6cba7,#f7e9d3 48%,#e2c39d);
+  background:linear-gradient(143deg,#e9d1b1,#f7ead6 48%,#e5cbaa);
   border:1px solid rgba(159,120,74,.45);
-  box-shadow:0 11px 20px rgba(86,60,35,.11);
+  box-shadow:0 8px 17px rgba(86,60,35,.085);
   clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);
   z-index:-1;
   pointer-events:none;
@@ -297,7 +297,7 @@
     font-size:clamp(23px,6vw,28px);
     line-height:1.2;
   }
-  #tonos-reservados .reserved-letter-envelope{height:94px;}
+  #tonos-reservados .reserved-letter-envelope{height:84px;bottom:16px;}
   #tonos-reservados .reserved-fan-figure{
     position:relative;top:auto;right:auto;
     width:min(104%,440px);
