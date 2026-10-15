@@ -5,6 +5,14 @@ const $=id=>document.getElementById(id);
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const content=$('invitationContent'),cover=$('portada'),audio=$('musicPlayer'),toggle=$('musicToggle');
 let opened=false;
+let readerTookControl=false;
+// Si la persona desliza mientras se abre el sobre, no forzamos el salto.
+const markReaderNavigation=()=>{if(opened)readerTookControl=true;};
+window.addEventListener('touchstart',markReaderNavigation,{passive:true});
+window.addEventListener('wheel',markReaderNavigation,{passive:true});
+window.addEventListener('keydown',event=>{
+ if(['ArrowDown','ArrowUp','PageDown','PageUp',' ','Home','End'].includes(event.key))markReaderNavigation();
+});
 function putPhoto(id,path){
  if(!path||typeof path!=='string')return;
  const el=$(id);if(!el)return;
@@ -63,7 +71,10 @@ $('openInvite').addEventListener('click',()=>{
  window.setTimeout(()=>{
   content.classList.add('active');content.inert=false;
   $('presentacion').classList.add('visible');
-  $('presentacion').scrollIntoView({behavior:reduced?'instant':'smooth',block:'start'});
+  // Respetar el gesto manual y evitar que la página arrastre al invitado.
+  if(!readerTookControl){
+   $('presentacion').scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'});
+  }
  },delay);
 });
 const revealObserver='IntersectionObserver' in window?new IntersectionObserver(entries=>{
