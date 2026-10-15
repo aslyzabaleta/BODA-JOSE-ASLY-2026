@@ -10,7 +10,7 @@ window.BODA_CONFIG = {
   musica: 'assets/Amor y Sentimiento - Banda Nueva Esperanza de Manguelito La que toca Bonito (Audio Corregido).mp3', // MP3 incorporado por los novios; verificar permiso de publicación
   inicioMusica: 92, // 1 minuto y 32 segundos; iniciar al pulsar ABRIR INVITACIÓN
   fotoPrincipal: 'imagen.png', // assets/foto-principal.jpg
-  fotosHistoria: ['', ''],
+  fotosHistoria: ['IMAGEN.jpg?v=20261014-1', ''],
   // Opcional: enlaces ?invitado=CODIGO. Este control es orientativo del lado del navegador,
   // no sirve como registro seguro ni como verificación de identidad.
   invitados: {
