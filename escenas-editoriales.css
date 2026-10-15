@@ -219,3 +219,12 @@
 @media (prefers-reduced-motion:reduce) {
   #historia .film-photo,#solo-adultos .adults-paper {transition:none!important;}
 }
+
+/* Primera fotografía real de Nuestra historia.
+   Mostrarla completa dentro del marco, sin recortar rostros ni vestido. */
+#historia #storyPhoto1.has-photo {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #e8d8c7;
+}
