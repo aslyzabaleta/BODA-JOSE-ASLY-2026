@@ -1,56 +1,133 @@
-/* José & Asly · Movimiento editorial para la invitación WEB.
-   Deslizamiento vertical nativo. Sin paginación, sin carruseles forzados.
-   Mantiene las fotografías y las composiciones originales sin recortarlas. */
+/* José & Asly · Movimiento web romántico V2 · 15 oct 2026
+   Una historia continua: desplazamiento nativo, sin imitar páginas de PDF.
+   Ninguna fotografía se sustituye, recorta ni altera permanentemente. */
 
 @media (prefers-reduced-motion: no-preference) {
-  /* Las líneas de texto aparecen de forma legible mientras el lector avanza. */
+  /* Tipografía con entrada sedosa y respiración suficiente entre frases. */
   html.motion-ready #invitationContent .reveal {
-    transition: opacity 960ms cubic-bezier(.2,.7,.2,1),
-                transform 1060ms cubic-bezier(.18,.72,.2,1),
-                filter 860ms ease;
+    transition:
+      opacity 1180ms cubic-bezier(.22,.7,.22,1),
+      transform 1360ms cubic-bezier(.16,.74,.17,1),
+      filter 1080ms ease-out;
+  }
+  html.motion-ready #invitationContent .reveal:not(.visible):not(:where(.visible *)) {
+    filter: blur(6px);
+  }
+  html.motion-ready #invitationContent .visible .reveal,
+  html.motion-ready #invitationContent .reveal.visible {
+    filter: blur(0);
   }
 
-  /* Flores: revelado atmosférico, sin órbitas ni efectos de arrastre. */
-  html.motion-ready #invitationContent .animated-scene > img.blooms,
-  html.motion-ready #invitationContent #lugares .venue-floral-field img.blooms {
+  /* Tarjetas: papel real y composiciones originales.
+     'scale' es independiente de 'transform' y conserva su inclinación. */
+  html.motion-ready #invitationContent .motion-panel {
     opacity: 0;
-    transition: opacity 1600ms ease-out;
+    filter: blur(7px);
+    scale: .972;
+    transition:
+      opacity 1300ms cubic-bezier(.2,.72,.19,1),
+      filter 1400ms ease-out,
+      scale 1500ms cubic-bezier(.16,.75,.18,1);
   }
-  html.motion-ready #invitationContent .animated-scene.visible > img.blooms,
-  html.motion-ready #invitationContent #lugares.visible .venue-floral-field img.blooms {
-    opacity: .9;
+  html.motion-ready #invitationContent .motion-panel.motion-in {
+    opacity: 1;
+    filter: none;
+    scale: 1;
   }
 
-  /* Figuras, iglesia, recepción, cifras y tonos: entrada individual al deslizar.
-     Se anima el marco, NO se altera la fotografía ni su encuadre. */
+  /* Fotografías y figuras: movimiento visible, pero suave.
+     Solo se mueve el marco, NO cambia el encuadre interior de la imagen. */
   html.motion-ready #invitationContent .motion-item {
     opacity: 0;
-    transform: translate3d(0, 21px, 0) scale(.988);
-    transition: opacity 900ms ease-out,
-                transform 1050ms cubic-bezier(.16,.75,.23,1);
+    filter: blur(6px);
+    transform: translate3d(0, 42px, 0) scale(.965);
+    transition:
+      opacity 1250ms cubic-bezier(.2,.7,.2,1),
+      filter 1350ms ease-out,
+      transform 1450ms cubic-bezier(.14,.76,.17,1);
     transition-delay: var(--motion-delay, 0ms);
   }
   html.motion-ready #invitationContent .motion-item.motion-in {
     opacity: 1;
+    filter: none;
     transform: translate3d(0, 0, 0) scale(1);
   }
 
-  /* Recuerdos impresos: preservar el giro real de las dos fotografías.
-     Solo se modifica opacidad/enfoque; nunca la posición aprobada. */
+  /* Los recuerdos conservan EXACTAMENTE sus inclinaciones y ubicaciones. */
   html.motion-ready #historia .film-photo.motion-fade {
     opacity: 0;
-    filter: blur(3px) saturate(.94);
-    transition: opacity 990ms ease-out, filter 1100ms ease-out;
+    filter: blur(6px) saturate(.93);
+    transition:
+      opacity 1200ms ease-out,
+      filter 1400ms ease-out,
+      transform 1550ms cubic-bezier(.16,.76,.19,1);
     transition-delay: var(--motion-delay, 0ms);
+  }
+  html.motion-ready #historia .film-photo:first-child.motion-fade {
+    transform: translate(13%,calc(2% + 35px)) rotate(-7deg) scale(.965);
+  }
+  html.motion-ready #historia .film-photo:last-child.motion-fade {
+    transform: translate(-12%,calc(12% + 35px)) rotate(7deg) scale(.965);
+  }
+  html.motion-ready #historia .film-photo:first-child.motion-fade.motion-in {
+    transform: translate(13%,2%) rotate(-7deg) scale(1);
+  }
+  html.motion-ready #historia .film-photo:last-child.motion-fade.motion-in {
+    transform: translate(-12%,12%) rotate(7deg) scale(1);
   }
   html.motion-ready #historia .film-photo.motion-fade.motion-in {
     opacity: 1;
     filter: none;
   }
 
-  /* Foto principal al salir del sobre: zoom respirado casi imperceptible. */
+  /* Flores originales: aparecen de forma gradual, sin órbitas ni giros extra. */
+  html.motion-ready #invitationContent .animated-scene > img.blooms,
+  html.motion-ready #invitationContent #lugares .venue-floral-field img.blooms {
+    opacity: 0;
+    transition: opacity 1850ms ease-in-out;
+  }
+  html.motion-ready #invitationContent .animated-scene.visible > img.blooms,
+  html.motion-ready #invitationContent #lugares.visible .venue-floral-field img.blooms {
+    opacity: var(--flor-visible, .86);
+  }
+  #invitationContent #lugares .venue-floral-field img.blooms {
+    --flor-visible: .52;
+  }
+  #invitationContent #lugares .bloom-two {transition-delay:200ms;}
+  #invitationContent #lugares .bloom-three {transition-delay:320ms;}
+  #invitationContent #lugares .bloom-four {transition-delay:420ms;}
+  #invitationContent #vestuario > img.blooms {--flor-visible:.73;}
+  #invitationContent #cuenta-regresiva > img.blooms {--flor-visible:.78;}
+  #invitationContent #presentacion > img.blooms {--flor-visible:.85;}
+
+  /* Pequeño destello editorial en títulos destacados, no sobre fotografías. */
+  html.motion-ready #invitationContent .motion-accent {
+    position: relative;
+  }
+  html.motion-ready #invitationContent .motion-accent::after {
+    content: "";
+    position: absolute;
+    width: min(38%,115px);
+    height: 1px;
+    bottom: -13px;
+    left: 50%;
+    background: linear-gradient(90deg,transparent,#d3b276 25%,#b2884f 50%,#d3b276 75%,transparent);
+    transform: translateX(-50%) scaleX(.1);
+    transform-origin: center;
+    opacity: 0;
+    transition:
+      transform 1500ms cubic-bezier(.19,.71,.19,1) 220ms,
+      opacity 1200ms ease-in-out 220ms;
+    pointer-events: none;
+  }
+  html.motion-ready #invitationContent .motion-accent.motion-in::after {
+    transform: translateX(-50%) scaleX(1);
+    opacity: .9;
+  }
+
+  /* Fotografía original del sobre: movimiento de cámara lento y casi imperceptible. */
   #portada.cover.is-opening .portrait-photo-image {
-    animation: bodaFotoViva 5.6s ease-out both;
+    animation: bodaFotoViva 5.8s ease-out both;
   }
   @keyframes bodaFotoViva {
     from { transform: scale(1); }
@@ -58,27 +135,45 @@
   }
 }
 
-/* Evitar recortes por transición en marcos de recuerdos y lugares. */
-#historia .story-memory-board,
-#lugares .venue-duo-card,
-#vestuario .dress-native-group {
-  backface-visibility: hidden;
+/* Mantener gestos naturales: scroll libre y pinch-zoom, sin scroll snapping. */
+html,body {touch-action:pan-y pinch-zoom;}
+#invitationContent {overscroll-behavior-y:auto;}
+#invitationContent .animated-scene {scroll-margin-top:0;}
+
+/* Reducir las distancias en pantallas pequeñas para evitar salidas bruscas. */
+@media (max-width:560px) and (prefers-reduced-motion:no-preference) {
+  html.motion-ready #invitationContent .motion-item {
+    transform: translate3d(0,29px,0) scale(.974);
+  }
+  html.motion-ready #invitationContent .motion-item.motion-in {
+    transform: translate3d(0,0,0) scale(1);
+  }
+  html.motion-ready #historia .film-photo:first-child.motion-fade {
+    transform: translate(13%,calc(2% + 23px)) rotate(-7deg) scale(.97);
+  }
+  html.motion-ready #historia .film-photo:last-child.motion-fade {
+    transform: translate(-12%,calc(12% + 23px)) rotate(7deg) scale(.97);
+  }
+  html.motion-ready #historia .film-photo:first-child.motion-fade.motion-in {
+    transform: translate(13%,2%) rotate(-7deg) scale(1);
+  }
+  html.motion-ready #historia .film-photo:last-child.motion-fade.motion-in {
+    transform: translate(-12%,12%) rotate(7deg) scale(1);
+  }
 }
 
-/* En dispositivos táctiles: conservar los gestos nativos de desplazamiento. */
-html,body { touch-action: pan-y pinch-zoom; }
-#invitationContent { overscroll-behavior-y: auto; }
-#invitationContent .animated-scene { scroll-margin-top: 0; }
-
-/* Accesibilidad: sin movimiento si el visitante así lo solicita. */
-@media (prefers-reduced-motion: reduce) {
+/* Seguridad de accesibilidad: todo visible y quieto al reducir movimiento. */
+@media (prefers-reduced-motion:reduce) {
   #invitationContent .motion-item,
+  #invitationContent .motion-panel,
   #invitationContent .motion-fade,
   #invitationContent .animated-scene > img.blooms,
   #invitationContent #lugares .venue-floral-field img.blooms {
-    opacity: 1 !important;
-    filter: none !important;
-    transition: none !important;
-    animation: none !important;
+    opacity:1 !important;
+    filter:none !important;
+    transition:none !important;
+    animation:none !important;
+    scale:1 !important;
   }
+  #invitationContent .motion-accent::after {display:none !important;}
 }
