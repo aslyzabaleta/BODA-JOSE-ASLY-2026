@@ -1,0 +1,205 @@
+/* BORRADOR CULTURAL — solo /prueba-concepto/.
+   José & Asly · Mojana sucreña · papelería con textura.
+   No interviene ni sustituye la página original.
+   Las flores de esta versión son EXCLUSIVAMENTE cayenas. */
+
+body.concepto-mojana {
+  --cayena-rosa:#b7858b;
+  --cayena-empolvado:#d5adb3;
+  --cayena-marfil:#f7f2e7;
+  --cayena-champan:#dac4a3;
+  --sombra-papel:rgba(108,75,49,.12);
+  background:#f3eadf;
+}
+
+/* Fondo continuo de lino/papel artesanal con delicadísimo grano */
+body.concepto-mojana .scene:not(.cover)::after,
+body.concepto-mojana .cover::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  opacity:.42;
+  background-image:
+    radial-gradient(circle at 1px 1px,rgba(118,88,60,.13) .48px,transparent .7px),
+    repeating-linear-gradient(105deg,transparent 0 5px,rgba(255,255,255,.12) 5px 6px,transparent 6px 12px),
+    repeating-linear-gradient(12deg,transparent 0 8px,rgba(148,113,84,.038) 8px 9px,transparent 9px 18px);
+  background-size:7px 7px,auto,auto;
+  mix-blend-mode:multiply;
+}
+body.concepto-mojana .cover {
+  background:radial-gradient(ellipse at 48% 48%,#fdf9f3 12%,#f0e4d7 79%,#e9dbc9);
+}
+body.concepto-mojana .scene:nth-of-type(odd):not(.cover){
+  background:radial-gradient(ellipse at 60% 38%,#fffaf3 0,#f5e8db 79%,#ecdfd2);
+}
+body.concepto-mojana .scene:nth-of-type(even):not(.cover){
+  background:radial-gradient(ellipse at 38% 48%,#fffcf6 0,#f4e9df 72%,#ebd9d0);
+}
+
+/* La cayena tiene fondo realmente transparente: jamás recortarla como las antiguas rosas. */
+body.concepto-mojana .scene > img.blooms,
+body.concepto-mojana .venue-floral-field img.blooms {
+  -webkit-mask-image:none!important;
+  mask-image:none!important;
+  mix-blend-mode:normal!important;
+  filter:drop-shadow(0 10px 12px rgba(99,66,59,.13))!important;
+  width:clamp(118px,19vw,205px)!important;
+  height:auto!important;
+  opacity:.83;
+  pointer-events:none;
+}
+body.concepto-mojana #portada > img.blooms{
+  width:clamp(142px,25vw,235px)!important;
+  opacity:.88;
+}
+body.concepto-mojana .venue-floral-field img.blooms{
+  width:clamp(86px,12vw,145px)!important;
+  opacity:.5;
+}
+body.concepto-mojana #historia > img.blooms{width:clamp(105px,17vw,165px)!important;}
+body.concepto-mojana #tonos-reservados > img.blooms{width:clamp(95px,15vw,160px)!important;}
+body.concepto-mojana .envelope-mini-flower-left,
+body.concepto-mojana .envelope-mini-flower-right {
+  background-image:url('assets/ramito-cayenas-mojana.svg')!important;
+  -webkit-mask-image:none!important;mask-image:none!important;
+  opacity:.79!important;
+}
+
+/* Tarjetas con papel fibroso y profundidad: composiciones, no capturas pegadas. */
+body.concepto-mojana .intro-paper-card,
+body.concepto-mojana #solo-adultos .adults-paper,
+body.concepto-mojana #tonos-reservados .reserved-letter,
+body.concepto-mojana #tonos-reservados .reserved-note-card,
+body.concepto-mojana .rsvp-form {
+  background-image:
+    radial-gradient(circle at 3px 3px,rgba(152,117,84,.055) .65px,transparent 1px),
+    repeating-linear-gradient(33deg,transparent 0 8px,rgba(166,127,95,.023) 8px 9px,transparent 9px 15px),
+    linear-gradient(153deg,#fffcf7,#fff8ef 54%,#f5e7da);
+  background-size:10px 10px,auto,auto;
+  border-color:rgba(160,124,83,.33);
+  box-shadow:7px 12px 0 rgba(215,185,163,.14),0 24px 45px var(--sombra-papel);
+}
+body.concepto-mojana #historia .story-memory-board::before {
+  background-image:
+    radial-gradient(circle at 2px 2px,rgba(159,119,76,.08) .5px,transparent .85px),
+    linear-gradient(145deg,#fffdfa,#f2e6d8);
+  background-size:9px 9px,auto;
+  box-shadow:12px 15px 0 rgba(220,190,163,.12),0 24px 50px rgba(104,76,59,.1);
+}
+body.concepto-mojana #lugares .venue-duo-card {
+  background-image:
+    radial-gradient(circle at 3px 3px,rgba(143,108,79,.05) .6px,transparent 1px),
+    linear-gradient(145deg,rgba(255,252,246,.95),rgba(248,235,219,.85));
+  background-size:11px 11px,auto;
+  border-color:rgba(175,136,92,.34);
+  box-shadow:5px 8px 0 rgba(228,205,185,.35),0 15px 32px rgba(109,74,49,.09);
+}
+
+/* Ramitos florales distribuidos en los bordes del papel */
+body.concepto-mojana .moj-bouquet,
+body.concepto-mojana .moj-hat {
+  display:block;
+  position:absolute;
+  pointer-events:none;
+  z-index:2;
+  height:auto;
+  max-width:none;
+  filter:drop-shadow(0 10px 9px rgba(103,74,58,.11));
+}
+body.concepto-mojana .moj-bouquet--intro {
+  width:clamp(104px,16vw,172px);
+  right:max(1%,calc((100vw - 1060px)/2));
+  bottom:-26px;
+  transform:rotate(-13deg);
+}
+body.concepto-mojana .moj-bouquet--historia{
+  width:clamp(95px,13vw,145px);
+  right:1.5%;
+  bottom:-38px;
+  transform:rotate(11deg);
+}
+body.concepto-mojana #lugares .venue-duo-layout{isolation:isolate;}
+body.concepto-mojana #lugares .venue-duo-layout .moj-bouquet--union{
+  width:clamp(94px,15vw,145px);
+  position:absolute;
+  left:50%;
+  top:58%;
+  z-index:5;
+  transform:translate(-52%,-50%) rotate(-12deg);
+  filter:drop-shadow(0 6px 10px rgba(89,60,49,.14));
+}
+body.concepto-mojana .moj-bouquet--tonos{
+  width:clamp(100px,15vw,165px);
+  left:-26px;
+  bottom:-20px;
+  transform:rotate(-11deg);
+}
+body.concepto-mojana .moj-bouquet--cierre{
+  width:clamp(125px,20vw,205px);
+  left:-10px;
+  bottom:-46px;
+  transform:rotate(12deg);
+}
+
+/* Sombreros dibujados como detalles de cultura, no como código obligatorio. */
+body.concepto-mojana .moj-hat--vueltiao {
+  width:clamp(90px,14vw,150px);
+  right:4%;
+  top:11%;
+  transform:rotate(13deg);
+  opacity:.76;
+}
+body.concepto-mojana .moj-hat--blanco {
+  width:clamp(86px,13vw,138px);
+  right:4%;
+  bottom:13%;
+  transform:rotate(-11deg);
+  opacity:.78;
+}
+body.concepto-mojana #lluvia .moj-hat--blanco{right:3%;bottom:7%;}
+
+/* Trenzado discreto inspirado en la tradición del sombrero vueltiao */
+body.concepto-mojana #historia .story-year::after,
+body.concepto-mojana #vestuario .dress-native-kicker::after {
+  content:"";
+  display:block;
+  width:91px;
+  height:4px;
+  margin-top:9px;
+  opacity:.48;
+  background:repeating-linear-gradient(135deg,#453e38 0 4px,#e5d9c2 4px 8px,#4c4540 8px 11px,#f4e7d1 11px 15px);
+}
+body.concepto-mojana #vestuario .dress-native-kicker::after{margin:10px auto 0;}
+
+/* Preservar el abanico aprobado, solamente se cambia la textura de la carta. */
+body.concepto-mojana #tonos-reservados .reserved-fan-figure,
+body.concepto-mojana #tonos-reservados .reserved-fan-svg {
+  filter:none!important;
+}
+body.concepto-mojana #tonos-reservados .reserved-fan-figure{
+  filter:drop-shadow(0 16px 17px rgba(92,62,45,.18))!important;
+}
+
+@media(max-width:700px){
+ body.concepto-mojana .scene > img.blooms{
+   width:clamp(95px,30vw,144px)!important;
+   opacity:.72;
+ }
+ body.concepto-mojana #portada > img.blooms{width:clamp(106px,34vw,157px)!important;}
+ body.concepto-mojana .venue-floral-field img.blooms{width:clamp(66px,19vw,90px)!important;opacity:.38;}
+ body.concepto-mojana .moj-bouquet--intro{width:115px;right:-38px;bottom:-30px;}
+ body.concepto-mojana .moj-bouquet--historia{width:100px;right:-34px;bottom:4%;}
+ body.concepto-mojana #lugares .venue-duo-layout .moj-bouquet--union{
+   left:51%;top:47%;width:79px;opacity:.84;
+ }
+ body.concepto-mojana .moj-bouquet--tonos{width:100px;left:-31px;bottom:0;}
+ body.concepto-mojana .moj-bouquet--cierre{width:109px;left:-28px;bottom:-17px;}
+ body.concepto-mojana .moj-hat--vueltiao{width:96px;right:-20px;top:9%;opacity:.53;}
+ body.concepto-mojana #lluvia .moj-hat--blanco{width:92px;right:-17px;bottom:9%;opacity:.65;}
+}
+@media(prefers-reduced-motion:reduce){
+ body.concepto-mojana .moj-bouquet,
+ body.concepto-mojana .moj-hat {animation:none!important;transition:none!important;}
+}
