@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 550" role="img" aria-labelledby="ti de">
+<title id="ti">Ramito de cayenas en tonos de José y Asly</title>
+<desc id="de">Cayenas en rosa viejo, rosa empolvado, rosa pálido, marfil, champán y borgoña, con hojas verde salvia; ilustración botánica sin fondo</desc>
+<defs>
+ <radialGradient id="brillo"><stop stop-color="#fff0e8" stop-opacity=".6"/><stop offset=".65" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#5d3043" stop-opacity=".15"/></radialGradient>
+ <linearGradient id="hoja" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b3c0a7"/><stop offset=".48" stop-color="#829678"/><stop offset="1" stop-color="#647f6d"/></linearGradient>
+ <g id="cayena">
+  <g fill="currentColor" stroke="#996b73" stroke-width=".9" stroke-opacity=".48">
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z"/>
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z" transform="rotate(71)"/>
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z" transform="rotate(145)"/>
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z" transform="rotate(217)"/>
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z" transform="rotate(288)"/>
+  </g>
+  <g fill="url(#brillo)" opacity=".36">
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z"/>
+   <path d="M0 0 C-23-22 -72-43 -87-69 Q-100-91-80-109 Q-83-132-57-140 Q-32-164-7-144 Q18-154 39-132 Q57-110 42-90 Q55-50 11-9 Z" transform="rotate(145)"/>
+  </g>
+  <g fill="none" stroke="#fbecdf" stroke-width="1.5" opacity=".46">
+   <path d="M-3-13 Q-24-76-17-118"/><path d="M5-12 Q6-79 21-110"/>
+   <path d="M-3-13 Q-24-76-17-118" transform="rotate(145)"/>
+   <path d="M-3-13 Q-24-76-17-118" transform="rotate(288)"/>
+  </g>
+  <circle r="26" fill="#ad6f7d" opacity=".8"/>
+  <path d="M2-1 Q26-27 47-78 Q57-90 70-99" stroke="#a66674" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M2-1 Q26-27 47-78 Q57-90 70-99" stroke="#f2d2be" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+  <g fill="#d5ad75"><circle cx="56" cy="-95" r="4.1"/><circle cx="65" cy="-107" r="4.2"/><circle cx="73" cy="-99" r="4.4"/><circle cx="78" cy="-113" r="3.6"/><circle cx="48" cy="-110" r="3.4"/></g>
+ </g>
+</defs>
+<g fill="none" stroke="#84987e" stroke-linecap="round">
+ <path d="M62 550 C87 471 130 415 184 356 S240 281 256 179" stroke-width="6.8"/>
+ <path d="M75 528 C119 462 169 457 230 410 S322 357 360 300" stroke-width="5.7"/>
+ <path d="M91 492 C125 431 132 328 111 261" stroke-width="5.2"/>
+ <path d="M167 411 C210 332 277 258 343 179" stroke-width="5.2"/>
+ <path d="M130 465 C194 452 246 474 304 451" stroke-width="3.8"/>
+</g>
+<g fill="url(#hoja)" stroke="#799078" stroke-width="1.2" opacity=".93">
+ <path d="M144 403 C79 400 48 377 28 331 C88 330 133 354 144 403Z"/>
+ <path d="M174 369 C194 311 236 301 282 303 C261 357 225 381 174 369Z"/>
+ <path d="M105 466 C49 469 29 436 21 401 C75 402 105 426 105 466Z"/>
+ <path d="M237 416 C255 369 297 352 338 359 C318 395 291 425 237 416Z"/>
+ <path d="M301 219 C328 171 366 164 412 174 C398 215 360 244 301 219Z"/>
+ <path d="M117 307 C69 301 47 272 52 232 C99 242 124 268 117 307Z"/>
+ <path d="M189 450 C238 438 276 448 305 460 C274 480 224 482 189 450Z"/>
+</g>
+<g stroke="#deead7" stroke-width="1.4" fill="none" opacity=".7">
+ <path d="M141 400 Q81 359 34 335"/><path d="M176 367 Q229 320 277 305"/>
+ <path d="M103 464 Q54 427 24 404"/><path d="M239 413 Q291 375 334 361"/>
+ <path d="M306 220 Q358 199 406 176"/><path d="M118 303 Q87 260 55 235"/>
+</g>
+<g transform="translate(255 180) rotate(-13) scale(.8)" style="color:#b7858b"><use href="#cayena"/></g>
+<g transform="translate(353 307) rotate(18) scale(.53)" style="color:#d5adb3"><use href="#cayena"/></g>
+<g transform="translate(117 271) rotate(-39) scale(.39)" style="color:#e9c6ce"><use href="#cayena"/></g>
+<g transform="translate(331 182) rotate(16) scale(.26)" style="color:#f7f2e7"><use href="#cayena"/></g>
+<g transform="translate(291 455) rotate(42) scale(.25)" style="color:#dac4a3"><use href="#cayena"/></g>
+<g transform="translate(87 447) rotate(-35) scale(.18)" style="color:#752d43"><use href="#cayena"/></g>
+</svg>
