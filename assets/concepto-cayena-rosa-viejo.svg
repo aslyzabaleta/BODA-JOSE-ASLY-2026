@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 270" role="img" aria-labelledby="flowerTitle flowerDesc">
+<title id="flowerTitle">Cayena rosa viejo</title>
+<desc id="flowerDesc">Cayena de cinco pétalos, con nervaduras delicadas y estambres dorados, en acuarela rosa viejo.</desc>
+<defs>
+ <radialGradient id="pink" cx=".33" cy=".27" r=".85">
+  <stop stop-color="#f7d6d7"/>
+  <stop offset=".45" stop-color="#d8a8b1"/>
+  <stop offset=".83" stop-color="#b87889"/>
+  <stop offset="1" stop-color="#9c6574"/>
+ </radialGradient>
+ <radialGradient id="warm" cx=".45" cy=".35" r=".7">
+  <stop stop-color="#f5d8b2"/><stop offset=".56" stop-color="#c78491"/><stop offset="1" stop-color="#9d5268"/>
+ </radialGradient>
+ <filter id="paper"><feGaussianBlur stdDeviation=".35"/></filter>
+</defs>
+<g fill="url(#pink)" stroke="#aa7182" stroke-width="1.8" stroke-opacity=".62" stroke-linejoin="round">
+ <path id="petal" d="M126 131 C99 114 71 103 61 73 C56 56 64 43 80 39 C91 23 110 31 122 44 C143 64 150 94 126 131Z"/>
+ <use href="#petal" transform="rotate(72 126 131)"/>
+ <use href="#petal" transform="rotate(144 126 131)"/>
+ <use href="#petal" transform="rotate(216 126 131)"/>
+ <use href="#petal" transform="rotate(288 126 131)"/>
+</g>
+<g fill="none" stroke="#a95b70" stroke-width="1.8" stroke-linecap="round" stroke-opacity=".48">
+ <path id="vein" d="M125 131 Q105 89 91 53 M111 103 Q91 89 74 83 M108 97 Q120 75 116 54"/>
+ <use href="#vein" transform="rotate(72 126 131)"/>
+ <use href="#vein" transform="rotate(144 126 131)"/>
+ <use href="#vein" transform="rotate(216 126 131)"/>
+ <use href="#vein" transform="rotate(288 126 131)"/>
+</g>
+<ellipse cx="126" cy="131" rx="23" ry="18" fill="url(#warm)" opacity=".93"/>
+<path d="M125 133 Q151 105 168 79 Q174 67 176 44" stroke="#ab5770" stroke-width="6.5" fill="none" stroke-linecap="round"/>
+<path d="M127 133 Q151 104 168 77 Q173 68 176 44" stroke="#e9b1b4" stroke-width="2" fill="none" stroke-linecap="round"/>
+<g stroke="#b87374" stroke-width="1.7" fill="none" stroke-linecap="round">
+ <path d="M156 93l-10 -13 M163 82l15 -13 M168 72l-11 -14 M172 62l15 -8 M175 51l-10 -14 M177 45l13 -11 M171 58l-9 -15"/>
+</g>
+<g fill="#bd9364" stroke="#a67053" stroke-width=".55">
+ <circle cx="146" cy="80" r="4"/><circle cx="178" cy="69" r="4.3"/>
+ <circle cx="157" cy="58" r="4"/><circle cx="187" cy="54" r="4"/>
+ <circle cx="165" cy="37" r="4"/><circle cx="190" cy="34" r="4.5"/>
+ <circle cx="176" cy="44" r="4.2"/><circle cx="162" cy="43" r="3.5"/>
+</g>
+</svg>
