@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 430 265" role="img" aria-labelledby="hatTitle hatDesc">
+<title id="hatTitle">Sombrero blanco con cinta negra</title><desc id="hatDesc">Sombrero color marfil con cinta negra, inspirado en los recordatorios de la boda</desc>
+<defs><linearGradient id="linen" x1="15%" y1="0%" x2="95%" y2="100%"><stop stop-color="#fffcf3"/><stop offset=".55" stop-color="#eee6d6"/><stop offset="1" stop-color="#cfc4ae"/></linearGradient><filter id="sh"><feDropShadow dx="4" dy="7" stdDeviation="5" flood-color="#6d614f" flood-opacity=".17"/></filter></defs>
+<g filter="url(#sh)">
+ <path d="M11 185 C34 159 107 153 171 159 C251 144 337 151 403 176 C430 198 383 220 319 230 C251 241 128 242 68 220 C19 209 4 199 11 185Z" fill="url(#linen)" stroke="#c4bba9" stroke-width="3"/>
+ <path d="M107 166 C111 127 124 59 146 48 C168 26 258 27 285 50 C300 62 321 124 326 169 C271 195 165 192 107 166Z" fill="url(#linen)" stroke="#bbb3a4" stroke-width="3"/>
+ <path d="M110 137 C181 163 259 163 317 140 L327 173 C259 198 169 194 105 169 Z" fill="#262626"/>
+ <path d="M113 136 C171 161 265 166 317 140" fill="none" stroke="#57514c" stroke-width="3" opacity=".55"/>
+ <path d="M136 52 C169 34 251 32 282 53" fill="none" stroke="#fffdf6" stroke-width="4" opacity=".7"/>
+ <path d="M40 191 C135 225 297 233 398 181" fill="none" stroke="#fffdf5" stroke-width="4" opacity=".6"/>
+</g></svg>
