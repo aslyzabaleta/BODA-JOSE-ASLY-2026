@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 210" role="img" aria-labelledby="hatTitle hatDesc">
+<title id="hatTitle">Sombrero vueltiao</title>
+<desc id="hatDesc">Ilustración artesanal de sombrero vueltiao con trenzado negro y marfil y figuras geométricas de la tradición sabanera.</desc>
+<defs>
+ <linearGradient id="ivory" x1="0" y1="0" x2=".95" y2="1">
+  <stop stop-color="#fff8e9"/><stop offset=".48" stop-color="#e8decb"/><stop offset="1" stop-color="#bcad94"/>
+ </linearGradient>
+ <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#524e4b"/><stop offset=".42" stop-color="#1e1e20"/><stop offset="1" stop-color="#77716c"/></linearGradient>
+ <pattern id="weave" width="23" height="22" patternUnits="userSpaceOnUse">
+  <rect width="23" height="22" fill="#232323"/>
+  <path d="M0 11L11.5 1L23 11L11.5 21Z" fill="none" stroke="#f8efe0" stroke-width="2.2"/>
+  <path d="M5 11l6.5 -6 6.5 6 -6.5 6z" fill="#e9dcc7"/>
+  <path d="M0 0h23M0 22h23" stroke="#c3b59b" stroke-width=".75"/>
+ </pattern>
+ <clipPath id="crown"><path d="M113 126 Q116 93 121 58 Q122 39 139 28 Q174 8 217 31 Q230 40 236 61 L247 128Z"/></clipPath>
+</defs>
+<!-- Ala curvada tradicional, no una banda de sombrero genérico. -->
+<path d="M22 134 Q53 107 115 117 Q139 134 189 132 Q247 115 306 122 Q333 126 347 143 Q339 169 305 178 Q239 195 186 176 Q117 161 60 165 Q24 160 22 134Z" fill="url(#shade)" stroke="#242323" stroke-width="3"/>
+<path d="M27 139 Q83 116 136 140 Q183 159 240 136 Q290 118 338 145" fill="none" stroke="#eee8db" stroke-width="15" stroke-linecap="round"/>
+<path d="M37 154 Q91 142 131 155 Q182 170 236 154 Q293 137 328 159" fill="none" stroke="#211f1f" stroke-width="6"/>
+<path d="M42 163 Q92 157 135 165 Q203 184 258 164 Q302 153 323 168" fill="none" stroke="#e8dfcf" stroke-width="3"/>
+<path d="M111 127 Q119 91 121 58 Q122 39 139 28 Q174 8 217 31 Q230 40 236 61 L248 129 Q186 145 111 127Z" fill="url(#ivory)" stroke="#282726" stroke-width="3"/>
+<g clip-path="url(#crown)">
+ <path d="M108 62 Q176 83 251 60 L259 127 Q177 145 108 126Z" fill="url(#weave)"/>
+ <path d="M110 73 Q177 94 253 72 M107 113 Q178 135 253 109" fill="none" stroke="#f5eddf" stroke-width="4"/>
+ <path d="M103 87Q181 106 253 86 M105 100Q183 121 253 98" fill="none" stroke="#efe4d3" stroke-width="1.7"/>
+ <path d="M112 126Q181 146 252 128" fill="none" stroke="#171717" stroke-width="11"/>
+ </g>
+<ellipse cx="174" cy="27" rx="43" ry="13" fill="#e8dfce" stroke="#262526" stroke-width="2"/>
+<path d="M148 28 Q170 16 201 27 Q172 35 148 28" stroke="#272525" fill="none" stroke-width="4"/>
+<path d="M137 27l11 4 9 -5 11 7 10 -5 12 4" fill="none" stroke="#242424" stroke-width="2.3"/>
+<path d="M34 141 Q60 127 93 132" stroke="#fff4e4" stroke-width="2.5" fill="none" opacity=".55"/>
+</svg>
